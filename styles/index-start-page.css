@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #ffffff;
+  --mainBlack: #000000;
+  --mainBacground: #e5e5e5;
+  --mainFooterBacground: #eef0ef;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainBacground);
+  font-family: "Inter", sans-serif;
+}
+
+/* --------------- Start of Navbar ---------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: var(--mainWhite);
+  z-index: 1;
+}
+.navbar-items {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  margin-right: 30px;
+  cursor: pointer;
+}
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -18px;
+  left: -8px;
+  width: 12px;
+  background: #4f4f4f;
+  /* padding: 0 5px; */
+  border-radius: 40%;
+  color: var(--mainWhite);
+}
+/* --------------- End of Navbar ---------------- */
