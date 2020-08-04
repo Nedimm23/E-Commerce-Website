@@ -66,20 +66,25 @@ body {
 
 .item {
   margin-right: 30px;
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
 .cart-btn {
   position: relative;
+  font-size: 0.875rem;
+
   cursor: pointer;
 }
 .cart-items {
   position: absolute;
-  top: -15px;
-  left: -8px;
-
+  top: -12px;
+  left: -10px;
+  font-size: 0.5rem;
   background: #4f4f4f;
-  padding: 0 3px;
+  padding: 3px 5px;
+  font-weight: 600;
+  line-height: 8px;
   border-radius: 40%;
   color: var(--mainWhite);
 }
@@ -87,121 +92,13 @@ body {
 
 .main {
   grid-area: main;
-  margin-bottom: 100px;
-}
-
-/* Start of products */
-.container-1 {
-  background: var(--mainBacground);
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
-}
-
-.women-section {
-  display: flex;
-  flex-direction: column;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-top: 52px;
-  width: 50%;
-}
-
-.under-image-women {
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  top: 300px;
-}
-
-.men-section {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  margin-right: 60px;
-  padding-top: 100px;
-  width: 50%;
-}
-
-.under-image-men {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  top: 370px;
-}
-
-.women-img-big {
-  position: relative;
-}
-
-.women-img-small {
-  position: absolute;
-  height: 417px;
-
-  right: 50.6%;
-  margin-top: 600px;
-}
-
-.men-img-small {
-  position: absolute;
-  height: 417px;
-
-  margin-top: 620px;
-}
-
-.description-women {
-  font-size: 24px;
-  line-height: 29px;
-  margin-top: 50px;
-}
-
-.sale {
-  font-size: 24px;
-  line-height: 29px;
-}
-.red {
-  color: #e01a1a;
-}
-
-.container-2 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
-  margin-top: 250px;
-}
-
-.last-section-left {
-  display: flex;
-  /* flex-direction: column; */
-  margin-left: 60px;
-  margin-top: 200px;
-  padding-top: 52px;
-  width: 50%;
-}
-
-.last-section-right {
-  display: flex;
-  flex-direction: column;
-  margin-top: 400px;
-  margin-right: 60px;
-  padding-top: 100px;
-  width: 50%;
-}
-
-.last-image-1 {
-  position: relative;
-  height: 378px;
-}
-
-.last-image-2 {
-  position: absolute;
-  z-index: 1;
-  align-self: flex-end;
+  margin: 0;
+  background: #e5e5e5;
 }
 
 .footer {
   grid-area: footer;
-  margin-top: 240px;
+  margin: 0;
   background: #eef0ef;
   height: 70px;
   width: 100%;
