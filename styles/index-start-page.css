@@ -14,14 +14,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   color: var(--mainBlack);
   font-family: "Inter", sans-serif;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
+  height: 100vh;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+.header {
+  grid-area: header;
 }
 
 /* --------------- Start of Navbar ---------------- */
@@ -37,7 +47,7 @@ body {
 }
 .navbar-items {
   width: 100%;
-  max-width: 1600px;
+
   margin: 0 60px;
   display: flex;
   align-items: center;
@@ -75,6 +85,11 @@ body {
   color: var(--mainWhite);
 }
 /* --------------- End of Navbar ---------------- */
+
+.main {
+  grid-area: main;
+  margin-bottom: 100px;
+}
 
 /* Start of products */
 .container-1 {
@@ -165,4 +180,19 @@ body {
   position: absolute;
   z-index: 1;
   align-self: flex-end;
+}
+
+.footer {
+  grid-area: footer;
+  margin-top: 240px;
+  background: #eef0ef;
+  height: 70px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
 }
