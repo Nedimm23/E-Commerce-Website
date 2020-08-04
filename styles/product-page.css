@@ -96,6 +96,80 @@ body {
   background: #e5e5e5;
 }
 
+/* Products */
+
+.container-1 {
+  background: var(--mainBacground);
+}
+
+.women-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+  margin-right: 10px;
+  padding-top: 52px;
+  width: 50%;
+}
+
+.products-center {
+  width: 90vw;
+  margin: 0 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img {
+  display: block;
+  width: 100%;
+  margin-top: 0.75rem;
+  min-height: 11.25rem;
+  height: -webkit-fill-available;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+  opacity: 0.5;
+}
+
+p#cf7_controls {
+  text-align: center;
+}
+#cf7_controls span {
+  padding-right: 2em;
+  cursor: pointer;
+}
+#cf7 {
+  position: relative;
+  height: 281px;
+  width: 450px;
+  margin: 0 auto 10px;
+}
+#cf7 img {
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+#cf7 img.opaque {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+}
+
 .footer {
   grid-area: footer;
   margin: 0;
