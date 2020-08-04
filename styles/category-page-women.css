@@ -88,7 +88,6 @@ body {
 
 .main {
   grid-area: main;
-
   background: #e5e5e5;
 }
 
@@ -99,9 +98,10 @@ body {
 }
 .section-title h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 24px;
+  line-height: 29px;
   margin-bottom: 5rem;
-  text-transform: capitalize;
+  color: var(--mainBlack);
   letter-spacing: var(--mainSpacing);
 }
 .products-center {
@@ -109,7 +109,7 @@ body {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
 }
@@ -117,26 +117,10 @@ body {
   position: relative;
   overflow: hidden;
 }
-.bag-btn {
-  position: absolute;
-  top: 70%;
-  right: 0;
-  background: var(--primaryColor);
-  border: none;
-  text-transform: uppercase;
-  padding: 0.5rem 0.75rem;
-  letter-spacing: var(--mainSpacing);
-  font-weight: bold;
-  transition: var(--mainTransition);
-  transform: translateX(101%);
-  cursor: pointer;
+.red {
+  color: #e01a1a;
 }
-.bag-btn:hover {
-  color: var(--mainWhite);
-}
-.fa-shopping-cart {
-  margin-right: 0.5rem;
-}
+
 .img-container:hover .bag-btn {
   transform: translateX(0);
 }
@@ -161,6 +145,15 @@ body {
 }
 
 .product h4 {
+  margin-top: 0.7rem;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainPriceColor);
+  text-align: center;
+}
+
+.product p {
   margin-top: 0.7rem;
   font-size: 10px;
   line-height: 12px;
