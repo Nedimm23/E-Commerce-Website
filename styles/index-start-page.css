@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
 :root {
-  /* --primaryColor: #f09d51; */
   --mainWhite: #ffffff;
   --mainBlack: #000000;
   --mainBacground: #e5e5e5;
@@ -108,6 +107,13 @@ body {
   width: 50%;
 }
 
+.under-image-women {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 300px;
+}
+
 .men-section {
   display: flex;
   flex-direction: column;
@@ -115,6 +121,13 @@ body {
   margin-right: 60px;
   padding-top: 100px;
   width: 50%;
+}
+
+.under-image-men {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  top: 370px;
 }
 
 .women-img-big {
