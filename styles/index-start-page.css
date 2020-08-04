@@ -155,8 +155,12 @@ body {
   margin-top: 50px;
 }
 
+.sale {
+  font-size: 24px;
+  line-height: 29px;
+}
 .red {
-  color: red;
+  color: #e01a1a;
 }
 
 .container-2 {
