@@ -101,8 +101,12 @@ body {
 
 /* Products */
 
-.container-1 {
+.container {
   display: flex;
+}
+
+.fading-image {
+  width: 50%;
 }
 
 /* .women-section {
@@ -112,12 +116,13 @@ body {
   margin-right: 10px;
   padding-top: 52px;
   width: 50%;
+  background: url("../images/slika-15.png") no-repeat left top;
 } */
 
 div#full-size {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  /* display: flex;
+  flex-direction: row;
+  width: 50%; */
   height: 720px;
   margin-top: 70px;
   margin-left: 60px;
@@ -126,8 +131,9 @@ div#full-size {
 }
 
 div#products-center {
-  /* width: 50%;
-  margin: 0 60px; */
+  /* width: 100%; */
+  margin-left: 60px;
+  margin-right: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 0.75rem;
@@ -288,12 +294,10 @@ div.material {
 .btn {
   background-color: var(--mainButtonColor);
   color: var(--mainButtonTextColor);
-
   margin: 10px 0;
   border: none;
   width: 315px;
   height: 48px;
-
   font-size: 20px;
   line-height: 24px;
   border: 1px solid var(--mainButtonColor);
@@ -306,7 +310,65 @@ div.material {
   color: var(--mainBlack);
 }
 
-.footer {
+.products {
+  padding: 6rem 0;
+}
+
+.section-title h2 {
+  text-align: left;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 5rem;
+  color: #999999;
+  letter-spacing: var(--mainSpacing);
+}
+
+.products-center {
+  width: 100%;
+  margin-left: 60px;
+  margin-right: 60px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 2rem;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img-bottom {
+  display: block;
+  width: 100%;
+  min-height: 28.125rem;
+  height: -webkit-fill-available;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img-bottom {
+  opacity: 0.5;
+}
+
+.product-bottom h3 {
+  text-transform: capitalize;
+  font-size: 10px;
+  line-height: 12px;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.product-bottom h4 {
+  margin-top: 0.7rem;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainPriceColor);
+  text-align: center;
+}
+*/ */ .footer {
   grid-area: footer;
   margin: 0;
   background: #eef0ef;
