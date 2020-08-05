@@ -102,23 +102,55 @@ body {
   background: var(--mainBacground);
 }
 
-.women-section {
+/* .women-section {
   display: flex;
   flex-direction: column;
   margin-left: 60px;
   margin-right: 10px;
   padding-top: 52px;
   width: 50%;
-}
+} */
 
-.products-center {
-  width: 90vw;
+div#products-center {
+  width: 50%;
   margin: 0 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-column-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 0.75rem;
   grid-row-gap: 2rem;
 }
+@media (min-width: 1281px) {
+  div#products-center {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  div#products-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  div#products-center {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  div#products-center {
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 281px) and (max-width: 480px) {
+  div#products-center {
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .img-container {
   position: relative;
   overflow: hidden;
@@ -139,37 +171,50 @@ body {
   opacity: 0.5;
 }
 
-p#cf7_controls {
-  text-align: center;
-}
-#cf7_controls span {
-  padding-right: 2em;
-  cursor: pointer;
-}
-#cf7 {
-  position: relative;
-  height: 281px;
-  width: 450px;
-  margin: 0 auto 10px;
-}
-#cf7 img {
-  position: absolute;
-  left: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+/* div#gallery {
+  width: 250px;
+  float: left;
+} */
+
+/* div#gallery img {
+  width: 100px;
+  margin: 10px;
+} */
+
+div#full-size {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 720px;
+  margin-top: 52px;
+  margin-left: 60px;
+  margin-right: 10px;
+  background-size: contain;
 }
 
-#cf7 img.opaque {
-  opacity: 1;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: alpha(opacity=1);
+div.slope {
+  background: url("../images/slika-15.png") no-repeat left top;
 }
 
+div.trees {
+  background: url("../images/slika-13.png") no-repeat left top;
+}
+
+div.drycanyon {
+  background: url("../images/slika-9.png") no-repeat left top;
+}
+
+div.range {
+  background: url("../images/slika-10.png") no-repeat left top;
+}
+
+div.cotton {
+  background: url("../images/slika-11.png") no-repeat left top;
+}
+
+div.material {
+  background: url("../images/slika-12.png") no-repeat left top;
+}
 .footer {
   grid-area: footer;
   margin: 0;
