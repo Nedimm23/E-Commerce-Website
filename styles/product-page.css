@@ -3,10 +3,13 @@
 :root {
   --mainWhite: #ffffff;
   --mainBlack: #000000;
-  --mainBacground: #e5e5e5;
+  --mainBacground: #f5f7f6;
   --mainFooterBacground: #eef0ef;
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
+  --mainPriceColor: #999999;
+  --mainButtonColor: #595959;
+  --mainButtonTextColor: #e0e0e0;
 }
 * {
   margin: 0;
@@ -93,13 +96,12 @@ body {
 .main {
   grid-area: main;
   margin: 0;
-  background: #e5e5e5;
+  background: #f5f7f6;
 }
 
 /* Products */
 
 .container-1 {
-  background: var(--mainBacground);
   display: flex;
 }
 
@@ -117,7 +119,7 @@ div#full-size {
   flex-direction: column;
   width: 50%;
   height: 720px;
-  margin-top: 52px;
+  margin-top: 70px;
   margin-left: 60px;
   margin-right: 10px;
   background-size: contain;
@@ -218,14 +220,90 @@ div.material {
   background: url("../images/slika-12.png") no-repeat left top;
 }
 
-.men-section {
+.section {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-left: 10px;
   margin-right: 60px;
-  padding-top: 100px;
+  margin-top: 100px;
   width: 50%;
   float: right;
+}
+
+.product h3 {
+  text-transform: capitalize;
+  font-size: 24px;
+  line-height: 29px;
+  /* margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center; */
+}
+
+.product h4 {
+  display: flex;
+  margin-top: 0.7rem;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--mainPriceColor);
+  /* s */
+}
+
+.product p {
+  margin-top: 0.7rem;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainPriceColor);
+  /* text-align: center; */
+}
+
+.description-1 {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  height: 211px;
+}
+
+.description-2 {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  height: 149px;
+}
+
+.description p {
+  color: #4f4f4f;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.button {
+  margin: 60px 0;
+}
+
+.btn {
+  background-color: var(--mainButtonColor);
+  color: var(--mainButtonTextColor);
+
+  margin: 10px 0;
+  border: none;
+  width: 315px;
+  height: 48px;
+
+  font-size: 20px;
+  line-height: 24px;
+  border: 1px solid var(--mainButtonColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--mainButtonTextColor);
+  color: var(--mainBlack);
 }
 
 .footer {
