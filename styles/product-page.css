@@ -100,6 +100,7 @@ body {
 
 .container-1 {
   background: var(--mainBacground);
+  display: flex;
 }
 
 /* .women-section {
@@ -111,14 +112,26 @@ body {
   width: 50%;
 } */
 
-div#products-center {
+div#full-size {
+  display: flex;
+  flex-direction: column;
   width: 50%;
-  margin: 0 60px;
+  height: 720px;
+  margin-top: 52px;
+  margin-left: 60px;
+  margin-right: 10px;
+  background-size: contain;
+}
+
+div#products-center {
+  /* width: 50%;
+  margin: 0 60px; */
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 0.75rem;
   grid-row-gap: 2rem;
 }
+
 @media (min-width: 1281px) {
   div#products-center {
     grid-template-columns: repeat(5, 1fr);
@@ -181,17 +194,6 @@ div#products-center {
   margin: 10px;
 } */
 
-div#full-size {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 720px;
-  margin-top: 52px;
-  margin-left: 60px;
-  margin-right: 10px;
-  background-size: contain;
-}
-
 div.slope {
   background: url("../images/slika-15.png") no-repeat left top;
 }
@@ -215,6 +217,17 @@ div.cotton {
 div.material {
   background: url("../images/slika-12.png") no-repeat left top;
 }
+
+.men-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 60px;
+  padding-top: 100px;
+  width: 50%;
+  float: right;
+}
+
 .footer {
   grid-area: footer;
   margin: 0;
