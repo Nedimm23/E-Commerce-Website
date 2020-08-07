@@ -105,6 +105,9 @@ body {
   display: flex;
 }
 
+.container-bottom {
+  display: flex;
+}
 .fading-image {
   width: 50%;
 }
@@ -202,7 +205,7 @@ div#products-center {
   margin: 10px;
 } */
 
-div.slope {
+/* div.slope {
   background: url("../assets/images/women-product-1.png") no-repeat left top;
 }
 
@@ -224,7 +227,7 @@ div.cotton {
 
 div.material {
   background: url("../assets/images/women-product-6.png") no-repeat left top;
-}
+} */
 
 .section {
   display: flex;

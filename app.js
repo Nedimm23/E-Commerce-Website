@@ -17,7 +17,7 @@ class Product {
 }
 
 function redirect(id) {
-  console.log(id);
+  // console.log(id);
 
   window.location.href = `./product-page.html#${id}`;
   // window.location.hash = id;
