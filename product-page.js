@@ -1,7 +1,7 @@
 class ProductPage {
   constructor() {
     const { hash } = window.location;
-    console.log(hash, "hash");
+    // console.log(hash, "hash");
     if (!hash) {
       window.location.href = "/";
     }
@@ -11,7 +11,7 @@ class ProductPage {
   }
 
   render() {
-    console.log(this.product, "test");
+    // console.log(this.product, "test");
     const el = document.querySelector("#test");
     const otherEl = document.querySelector("#test2");
     const myHTML = `
@@ -70,7 +70,7 @@ class ProductPage {
                                 ${this.product[0].description}
                             </p>
                         </div>
-                        <div class="button">
+                        <div class="button" onclick="addCartItem(product)">
                             <button class="btn">Add to Cart</button>
                         </div>
                         <div class="description-2">                            
@@ -120,12 +120,34 @@ class ProductPage {
           </div>
         </article>
     `;
-    console.log(myHTML);
+    // console.log(myHTML);
     el.innerHTML = myHTML;
     otherEl.innerHTML = restHTML;
   }
 
   //   addToCart nedostaje
+
+  addCartItem(product) {
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+    div.innerHTML = `
+            <!-- Cart item -->
+            <img src="${product.images.preview}" alt="product" />
+            <div>
+                <h4>${product.title}</h4>
+                <h5>$${product.price}</h5>
+                <span class="remove-item" data-id="${product.id}">remove</span>
+            </div>
+            <div>
+                <i class="fas fa-chevron-up" data-id="${product.id}"></i>
+                <p class="item-amount">${product.amount}</p>
+                <i class="fas fa-chevron-down" data-id="${product.id}"></i>
+            </div>
+            <!-- End cart item -->d
+        `;
+
+    cartContent.appendChild(div);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

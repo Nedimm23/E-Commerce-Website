@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/cart-modal.css" />
 
     <!-- <link rel="stylesheet" href="../styles/category-page.css" /> -->
     <link rel="stylesheet" href="../styles/product-page.css" />
@@ -21,7 +24,7 @@
             <nav class="navbar">
                 <div class="navbar-items">
                     <div class="navbar-left">
-                        <a style="text-decoration: none;" class="item">Women</a>
+                        <a style="text-decoration: none;" href="./category-page.html" class="item">Women</a>
                         <a style="text-decoration: none;" class="item">Men</a>
                         <a style="text-decoration: none;" class="item">Sale</a>
                     </div>
@@ -33,7 +36,7 @@
                     <div class="navbar-right">
                         <a style="text-decoration: none;" class="item">Contact</a>
                         <a style="text-decoration: none;" class="item">Sign In</a>
-                        <div class="cart-btn">
+                        <div class="cart-btn" onclick="showCart()">
                             <div class="cart-items">0</div>
                             <p>Cart</p>
                         </div>
@@ -43,6 +46,32 @@
             </nav>
             <!-- end of navbar -->
         </header>
+
+        <!-- cart -->
+        <div class="cart-overlay">
+            <div class="cart">
+                <span class="close-cart" onclick="hideCart()">
+                    <i class="fas fa-window-close"></i>
+                </span>
+                <h2>Your Cart</h2>
+                <div class="cart-content">
+                    <!-- cart item -->
+                    <div class="cart-item">
+
+                    </div>
+                    <!-- end of cart item -->
+                </div>
+                <div class="cart-footer">
+                    <h3>Your total : $ <span class="cart-total">0</span></h3>
+                    <!-- <button class="clear-cart banner-btn">Clear Cart</button>
+                                <button class="btn" id="myBtn" style="margin-top: 1rem;">Go To Checkout</button> -->
+                    <div class="button">
+                        <button class="btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of cart -->
 
         <!-- <div id="test"></div> -->
         <main class="main">
@@ -69,7 +98,6 @@
     </div>
 
     <script type="text/javascript" src="../products.js"></script>
-
     <script src="../app.js"></script>
     <script src="../init.js"></script>
     <script src="../product-page.js"></script>

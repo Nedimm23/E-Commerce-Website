@@ -8,6 +8,8 @@
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
   --mainPriceColor: #999999;
+  --mainButtonColor: #595959;
+  --mainButtonTextColor: #e0e0e0;
 }
 * {
   margin: 0;
@@ -35,7 +37,7 @@ body {
   display: flex;
   align-items: center;
   background: var(--mainWhite);
-  z-index: 1;
+  z-index: 2;
 }
 .navbar-items {
   width: 100%;

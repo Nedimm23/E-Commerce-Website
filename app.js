@@ -1,4 +1,12 @@
 const productsDOM = document.querySelector(".products-center");
+const cartBtn = document.querySelector(".cart-btn");
+const closeCartBtn = document.querySelector(".close-cart");
+const clearCartBtn = document.querySelector(".clear-cart");
+const cartDOM = document.querySelector(".cart");
+const cartOverlay = document.querySelector(".cart-overlay");
+const cartItems = document.querySelector(".cart-items");
+const cartTotal = document.querySelector(".cart-total");
+const cartContent = document.querySelector(".cart-content");
 
 class Product {
   async getProducts() {
@@ -46,10 +54,20 @@ class UI {
   }
 }
 
+showCart = () => {
+  cartOverlay.classList.add("transparentBcg");
+  cartDOM.classList.add("showCart");
+};
+
+hideCart = () => {
+  cartOverlay.classList.remove("transparentBcg");
+  cartDOM.classList.remove("showCart");
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const product = localStorage.getItem("products");
-  console.log(products);
+  // console.log(products);
 
   // setup app
   // ui.setupApp();
@@ -66,8 +84,3 @@ $(document).ready(function () {
     });
   });
 });
-
-showCart = () => {
-  cartOverlay.classList.add("transparentBcg");
-  cartDOM.classList.add("showCart");
-};
