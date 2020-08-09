@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter");
 
 :root {
   --mainWhite: #ffffff;
@@ -59,10 +59,14 @@
   cursor: pointer;
 }
 .cart h2 {
-  text-transform: capitalize;
   text-align: center;
   letter-spacing: var(--mainSpacing);
   margin-bottom: 2rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
 }
 /*---------- Cart Item -------------------- */
 .cart-item {
@@ -78,41 +82,77 @@
 }
 .cart-item h4 {
   font-size: 0.85rem;
-  text-transform: capitalize;
+  font-family: Inter;
+  line-height: 15px;
   letter-spacing: var(--mainSpacing);
+  font-weight: normal;
+  color: var(--mainBlack);
 }
 .cart-item h5 {
+  font-family: Inter;
+  font-weight: normal;
+  color: var(--mainPriceColor);
+  line-height: 15px;
   margin: 0.5rem 0;
   letter-spacing: var(--mainSpacing);
 }
 .item-amount {
   text-align: center;
 }
-.remove-item {
-  color: grey;
-  cursor: pointer;
-}
-.fa-chevron-up,
-.fa-chevron-down {
-  color: var(--mainPriceColor);
-  cursor: pointer;
-}
+
 /*---------- End of Cart Item -------------------- */
 
 .cart-footer {
-  margin-top: 2rem;
   letter-spacing: var(--mainSpacing);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .cart-footer h3 {
+  font-family: Inter;
   text-transform: capitalize;
   margin-bottom: 1rem;
+}
+
+.total {
+  margin: 1.5rem 0;
+}
+
+.total h3 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--mainBlack);
+}
+
+.taxes {
+  margin: 1.5rem 0;
+}
+
+.taxes h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: var(--mainBlack);
+}
+
+.cart-total {
+  font-family: Inter;
+  color: var(--mainPriceColor);
+  float: right;
 }
 
 /* --------------- End of Cart ---------------- */
 
 .button {
   margin: 60px 0;
+
+  display: flex;
+  align-self: center;
 }
 
 .btn {

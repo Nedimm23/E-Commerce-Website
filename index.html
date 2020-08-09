@@ -35,7 +35,7 @@
                         <a style="text-decoration: none;" class="item">Contact</a>
                         <a style="text-decoration: none;" class="item">Sign In</a>
                         <div class="cart-btn" onclick="showCart()">
-                            <div class="cart-items">0</div>
+                            <div class="cart-items">3</div>
                             <p>Cart</p>
                         </div>
                     </div>
@@ -51,18 +51,36 @@
                 <span class="close-cart" onclick="hideCart()">
                     <i class="fas fa-window-close"></i>
                 </span>
-                <h2>Your Cart</h2>
+                <h2>Cart</h2>
                 <div class="cart-content">
                     <!-- cart item -->
                     <div class="cart-item">
-
+                        <img src="./assets/images/women-product-1.png" alt="product" />
+                        <div>
+                            <h4>RECYCLED POLYESTER PERFORMANCE PARKA</h4>
+                            <h5>€135 x 1</h5>
+                        </div>
                     </div>
                     <!-- end of cart item -->
+                    <div class="cart-item">
+                        <img src="./assets/images/women-fashion-3.png" alt="product" />
+                        <div>
+                            <h4>RECYCLED POLYESTER PERFORMANCE PARKA</h4>
+                            <h5>€145 x 2</h5>
+                        </div>
+                    </div>
+
                 </div>
+                <hr>
                 <div class="cart-footer">
-                    <h3>Your total : $ <span class="cart-total">0</span></h3>
-                    <!-- <button class="clear-cart banner-btn">Clear Cart</button>
-                    <button class="btn" id="myBtn" style="margin-top: 1rem;">Go To Checkout</button> -->
+                    <div class="taxes">
+                        <h5>Subtotal <span class="cart-total">€425</span></h5>
+                        <h5>Taxes <span class="cart-total">€81</span></h5>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <h3>Total<span class="cart-total">€506</span></h3>
+                    </div>
                     <div class="button">
                         <button class="btn">Checkout</button>
                     </div>

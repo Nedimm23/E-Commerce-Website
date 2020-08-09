@@ -4,6 +4,6 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("load", () => {
-  console.log(cart);
+  // console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
 });

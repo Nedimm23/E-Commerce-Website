@@ -70,7 +70,7 @@ class ProductPage {
                                 ${this.product[0].description}
                             </p>
                         </div>
-                        <div class="button" onclick="addCartItem(product)">
+                        <div class="button" onclick="addCartItem(item)">
                             <button class="btn">Add to Cart</button>
                         </div>
                         <div class="description-2">                            
