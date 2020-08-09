@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/checkout.css" />
+
+        <title>Payment Page</title>
+    </head>
+
+<body>
+    <div>
+        <div class="checkout">
+            <nav class="checkout-header">
+                <div class="checkout-logo"><a href="../index.html">
+                        <img src="../assets/images/Vector.png">
+                    </a>
+                </div>
+                <ul class="checkout-navigation">
+                    <li class="checkout-navigation-link black-text-color">Information</li><svg class="arrow" width="9"
+                        height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7.5 7.5L1 14" stroke="#C4C4C4"></path>
+                    </svg>
+                    <li class="checkout-navigation-link">Payment</li><svg class="arrow" width="9" height="15"
+                        viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7.5 7.5L1 14" stroke="#C4C4C4"></path>
+                    </svg>
+                    <li class="checkout-navigation-link">Confirm</li>
+                </ul>
+            </nav>
+            <div class="checkout-main-content">
+                <div class="form">
+                    <div class="form-information">
+                        <div class="form-payment display-none">
+                            <div class="checkout-title"><span>Payment provider</span></div>
+                            <div class="form-payment-main-content">
+                                <div class="form-payment-method paypal"></div>
+                                <div class="form-payment-method stripe"></div>
+                                <div class="form-payment-method apple-pay"></div>
+                                <div class="form-payment-method klarna"></div>
+                                <div class="form-confirm"><a href="./order.html"><button class="block-button">Continue
+                                            to Confirm</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart">
+                    <div class="cart-header"><span class="cart-text">Cart</span></div>
+                    <div class="cart-main-content">
+                        <div class="cart-products">
+                            <div class="cart-product"><img class="cart-image" src="../assets/images/women-product-1.png"
+                                    alt="cart-product">
+                                <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
+                                        PARKA</span><span class="cart-price">€</span><span class="cart-quantity"> x
+                                        1</span></div>
+                            </div>
+                            <div class="cart-product"><img class="cart-image" src="../assets/images/women-fashion-3.png"
+                                    alt="cart-product">
+                                <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
+                                        PARKA</span><span class="cart-price">€</span><span class="cart-quantity"> x
+                                        2</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-subtotal"><span class="cart-text">Subtotal</span><span
+                                class="cart-price">€425</span>
+                        </div>
+                        <div class="cart-taxes"><span class="cart-text">Taxes</span><span class="cart-value">€81</span>
+                        </div>
+                        <div class="cart-total"><span class="cart-text">Total</span><span class="cart-value">€506</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <footer class="footer">
+                <div class="row">
+                    <p>Copyright 2020</p>
+                </div>
+            </footer>
+        </div>
+
+</body>
+
+</html>

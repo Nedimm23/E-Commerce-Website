@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/checkout.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Checkout Page</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles/checkout.css" />
+        <title>Order Page</title>
+    </head>
 
 <body>
     <div class="checkout">
@@ -35,26 +40,23 @@
         <div class="checkout-main-content">
             <div class="form">
                 <div class="form-information">
-                    <div class="form-group">
-                        <div class="form-label"><span>Contact Information</span></div>
-                        <div class="form-contact-information form-group"><input class="form-input" type="text"
-                                placeholder="Email"></div>
-                    </div>
-                    <div>
-                        <div class="form-label"><span>Shipping Address</span></div>
-                        <div class="form-width-50"><input class="form-input" type="text" placeholder="First Name"><input
-                                class="form-input" type="text" placeholder="Last Name"></div>
-                        <div><input class="form-input" type="text" placeholder="Company"><input class="form-input"
-                                type="text" placeholder="Address"><input class="form-input" type="text"
-                                placeholder="Apartment, suite, etc. (optional)"></div>
-                        <div class="form-width-50"><input class="form-input" type="text"
-                                placeholder="Postal Code"><input class="form-input" type="text" placeholder="City">
+                    <div class="checkout-confirm display-none">
+                        <div class="checkout-confirm-main-content">
+                            <div class="checkout-confirm-title"><span> Confirm</span></div>
+                            <div class="checkout-confirm-information"><span
+                                    class="checkout-confirm-email">dzibra_23@hotmail.com</span><span
+                                    class="checkout-confirm-full-name">Nedim Džibrić</span><span
+                                    class="checkout-confirm-address">Redžepa
+                                    ef. Muminhodžića 16</span><span class="checkout-confirm-city">Lukavac</span><span
+                                    class="checkout-confirm-country">Bosnia
+                                    and Herzegovina</span><span class="checkout-confirm-phone-number">+387 61 644
+                                    989</span>
+                                <div><span class="checkout-confirm-payment-method">Stripe</span><span
+                                        class="checkout-confirm-email-2">(dzibra_23@hotmail.com)</span></div>
+                            </div>
+                            <div class="checkout-confirm-button"><button class="block-button">Order</button></div>
                         </div>
-                        <div><input class="form-input" type="text" placeholder="Country/Region"><input
-                                class="form-input" type="text" placeholder="Phone (optional)"></div>
                     </div>
-                    <div><a href="./payment-page.html"><button class="block-button">
-                                Continue to Payment</button></a></div>
                 </div>
             </div>
             <div class="cart">
@@ -84,7 +86,7 @@
                     </div>
                     <div class="cart-total"><span class="cart-text">Total</span><span class="cart-value">€506</span>
                     </div>
-                    <div class="cart-checkout"><a class="block-button" href="/checkout">Checkout</a></div>
+
                 </div>
             </div>
 
@@ -92,7 +94,7 @@
         </div>
 
 
-        <footer class="footer">
+        <footer style="z-index: 50;" class="footer">
             <div class="row">
                 <p>Copyright 2020</p>
             </div>
