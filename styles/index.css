@@ -95,6 +95,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   margin: 60px;
+  margin-bottom: 33%;
 }
 
 .home-image {
@@ -114,11 +115,17 @@ body {
   grid-template-columns: 50%;
   justify-content: right;
   position: relative;
-  bottom: 9%;
+  bottom: 110px;
+}
+
+.left-overlap-img {
+  display: grid;
+  grid-template-columns: 153%;
+  margin-top: 130px;
 }
 
 .right-content {
-  margin-top: 20%;
+  margin-top: 100px;
   text-align: right;
 }
 .home-male-shoes {
@@ -126,12 +133,7 @@ body {
   grid-template-columns: 50%;
   justify-content: left;
   position: relative;
-  bottom: 9%;
-}
-
-.left-overlap-img {
-  display: grid;
-  grid-template-columns: 152%;
+  bottom: 110px;
 }
 
 .right-overlap-img {
@@ -141,8 +143,44 @@ body {
 }
 .home-female-clothing {
   position: relative;
-  top: 85%;
-  right: 34%;
+  top: 95%;
+  right: 35%;
+}
+
+@media (max-width: 991.98px) {
+  .main-content {
+    margin: 40px 40px 33% 40px !important;
+  }
+  .home-image-caption {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    margin-bottom: 0 !important;
+  }
+  .home-image-caption {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .left-content {
+    grid-row: 1;
+  }
+  .left-overlap-img {
+    display: none;
+  }
+
+  .right-content {
+    grid-row: 2;
+    margin-top: 0;
+  }
+  .right-overlap-img {
+    display: none;
+  }
 }
 
 a {
@@ -161,6 +199,7 @@ section {
 
 .sale {
   color: #e01a1a;
+  cursor: pointer;
 }
 
 .footer {

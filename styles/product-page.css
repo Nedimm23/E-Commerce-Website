@@ -112,16 +112,6 @@ body {
   width: 50%;
 }
 
-/* .women-section {
-  display: flex;
-  flex-direction: column;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-top: 52px;
-  width: 50%;
-  background: url("../images/slika-15.png") no-repeat left top;
-} */
-
 div#full-size {
   /* display: flex;
   flex-direction: row;
@@ -205,7 +195,7 @@ div#products-center {
   margin: 10px;
 } */
 
-/* div.slope {
+div.slope {
   background: url("../assets/images/women-product-1.png") no-repeat left top;
 }
 
@@ -227,7 +217,7 @@ div.cotton {
 
 div.material {
   background: url("../assets/images/women-product-6.png") no-repeat left top;
-} */
+}
 
 .section {
   display: flex;
