@@ -8,10 +8,12 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 
+const cartStorageKey = "cartStorage";
+
 class Product {
   async getProducts() {
     try {
-      const allProducts = products.map((product) => {
+      const allProducts = PRODUCTS_LIST.map((product) => {
         const { title, price, id, images } = product;
 
         return { id, title, price, images };
@@ -32,10 +34,10 @@ function redirect(id) {
 }
 
 class UI {
-  displayProducts(products) {
+  displayProducts() {
     let result = "";
 
-    products.forEach((product) => {
+    PRODUCTS_LIST.forEach((product) => {
       result += `       
             <article class="product" onclick="redirect(${product.id})">
                     <div class="img-container">
@@ -43,8 +45,8 @@ class UI {
                             <img src="${product.images.preview}" alt="product" class="product-img" />
                         </a>
 
-                        <h3>${product.title}</h3>
-                        <h4>€ ${product.price}</h4>
+                        <p>${product.title}</p>
+                        <span>€ ${product.price}</span>
                     </div>
               </article>
             `;
@@ -54,7 +56,93 @@ class UI {
   }
 }
 
+getProductById = (productId) => {
+  let out;
+  PRODUCTS_LIST.forEach((product) => {
+    if (product.id === productId) {
+      out = product;
+      return;
+    }
+  });
+
+  return out;
+};
+
+getCartProductFromStorage = () => {
+  let products,
+    productsString = localStorage.getItem(cartStorageKey);
+  if (productsString === null) {
+    products = [];
+  } else {
+    products = JSON.parse(productsString);
+  }
+
+  return products;
+};
+
+addToCartStorage = (productId) => {
+  let products = getCartProductFromStorage();
+
+  products.push(productId);
+
+  localStorage.setItem(cartStorageKey, JSON.stringify(products));
+  renderCartCount();
+};
+
+removeFromCartStorage = (index) => {
+  let products = getCartProductFromStorage();
+
+  products.splice(index, 1);
+
+  localStorage.setItem(cartStorageKey, JSON.stringify(products));
+  renderCartProducts();
+  renderCartCount();
+};
+
+getProductsInCart = () => {
+  let products = getCartProductFromStorage();
+
+  let productsInCart = [];
+  products.forEach((productId) => {
+    productsInCart.push(getProductById(productId));
+  });
+
+  console.log("productsInCart", productsInCart, products);
+  return productsInCart;
+};
+
+renderCartCount = () => {
+  let products = getCartProductFromStorage();
+
+  cartItems.innerHTML = products.length;
+};
+
+renderCartProducts = () => {
+  let content = "",
+    index = 0,
+    products = getProductsInCart();
+
+  products.forEach((product) => {
+    content += `       
+            <!-- cart item -->
+            <div class="cart-item">
+                <img src="${product.images.preview}" alt="product" />
+                <div>
+                    <h4>${product.title}</h4>
+                    <h5>€${product.price} x 1</h5>
+                    <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
+                </div>
+            </div>
+            <!-- end of cart item -->
+            `;
+    index++;
+  });
+
+  cartContent.innerHTML = content;
+};
+
 showCart = () => {
+  renderCartProducts();
   cartOverlay.classList.add("transparentBcg");
   cartDOM.classList.add("showCart");
 };
@@ -72,10 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // setup app
   // ui.setupApp();
 
-  ui.displayProducts(products);
+  ui.displayProducts();
 });
 
 $(document).ready(function () {
+  renderCartCount();
   $("img").click(function (e) {
     var newclass = $(this).attr("id");
     var oldclass = $("#full-size").attr("class");

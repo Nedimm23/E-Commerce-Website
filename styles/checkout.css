@@ -166,7 +166,7 @@ body {
 .checkout {
   padding: 0;
   margin: 0;
-  background-color: #f5f7f6;
+  background-color: var(--mainBacground);
 }
 .block-button {
   width: 50%;

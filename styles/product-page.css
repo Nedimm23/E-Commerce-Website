@@ -91,12 +91,21 @@ body {
   border-radius: 40%;
   color: var(--mainWhite);
 }
+
+.sale {
+  color: #e01a1a;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
 /* --------------- End of Navbar ---------------- */
 
 .main {
   grid-area: main;
   margin: 0;
-  background: #f5f7f6;
+  background: var(--mainBacground);
 }
 
 /* Products */
@@ -176,6 +185,7 @@ div#products-center {
 .product-img {
   display: block;
   width: 100%;
+  object-fit: cover;
   margin-top: 0.75rem;
   min-height: 11.25rem;
   height: -webkit-fill-available;

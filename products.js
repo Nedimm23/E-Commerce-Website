@@ -1,7 +1,7 @@
-const products = [
+var PRODUCTS_LIST = [
   {
     id: 1,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 1",
     price: 135,
     images: {
       preview: "../assets/images/women-product-1.png",
@@ -18,7 +18,7 @@ const products = [
   },
   {
     id: 2,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 2",
     price: 125,
     images: {
       preview: "../assets/images/women-product-2.png",
@@ -35,7 +35,7 @@ const products = [
   },
   {
     id: 3,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 3",
     price: 145,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -52,7 +52,7 @@ const products = [
   },
   {
     id: 4,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 4",
     price: 145,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -69,7 +69,7 @@ const products = [
   },
   {
     id: 5,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 5",
     price: 115,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -86,7 +86,7 @@ const products = [
   },
   {
     id: 6,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 6",
     price: 145,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -103,7 +103,7 @@ const products = [
   },
   {
     id: 7,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 7",
     price: 145,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -120,7 +120,7 @@ const products = [
   },
   {
     id: 8,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 8",
     price: 145,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -137,7 +137,7 @@ const products = [
   },
   {
     id: 9,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 9",
     price: 145,
     images: {
       preview: "../assets/images/women-fashion-1.png",
@@ -154,7 +154,7 @@ const products = [
   },
   {
     id: 10,
-    title: "RECYCLED POLYESTER PERFORMANCE PARKA",
+    title: "RECYCLED POLYESTER PERFORMANCE PARKA 10",
     price: 165,
     images: {
       preview: "../assets/images/women-fashion-1.png",
