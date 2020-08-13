@@ -1,7 +1,7 @@
 const productsDOM = document.querySelector(".products-center");
 const cartBtn = document.querySelector(".cart-btn");
 const closeCartBtn = document.querySelector(".close-cart");
-const clearCartBtn = document.querySelector(".clear-cart");
+
 const cartDOM = document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-items");
@@ -42,7 +42,7 @@ class UI {
             <article class="product" onclick="redirect(${product.id})">
                     <div class="img-container">
                         <a >
-                            <img src="${product.images.preview}" alt="product" class="product-img" />
+                            <img src="${product.image}" alt="product" class="product-img" />
                         </a>
 
                         <p>${product.title}</p>
@@ -126,7 +126,7 @@ renderCartProducts = () => {
     content += `       
             <!-- cart item -->
             <div class="cart-item">
-                <img src="${product.images.preview}" alt="product" />
+                <img src="${product.image}" alt="product" />
                 <div>
                     <h4>${product.title}</h4>
                     <h5>€${product.price} x 1</h5>
@@ -141,6 +141,32 @@ renderCartProducts = () => {
   cartContent.innerHTML = content;
 };
 
+calculationPrice = () => {
+  let subtotal = 0;
+  let taxPercent = 17;
+
+  cartProducts.forEach((cartProduct) => {
+    subtotal += cartProduct.price * cartProduct.quantity;
+  });
+
+  let taxes = Math.round(subtotal * (taxPercent / 100));
+
+  setSubtotal(subtotal);
+  setTaxes(taxes);
+  setTotal(subtotal + taxes);
+};
+
+setCartValues = () => {
+  let tempTotal = 0;
+  let itemsTotal = 0;
+  cartProducts.map((cartProduct) => {
+    tempTotal += cartProduct.price * cartProduct.amount;
+    itemsTotal += cartProduct.amount;
+  });
+  cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+  cartItems.innerText = itemsTotal;
+};
+
 showCart = () => {
   renderCartProducts();
   cartOverlay.classList.add("transparentBcg");
@@ -150,6 +176,29 @@ showCart = () => {
 hideCart = () => {
   cartOverlay.classList.remove("transparentBcg");
   cartDOM.classList.remove("showCart");
+};
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0 && window.innerWidth > 575.98) {
+    document.getElementsByClassName("cart")[0].classList.add("extend");
+  } else {
+    document.getElementsByClassName("cart")[0].classList.remove("extend");
+  }
+});
+
+sideDrawer = () => {
+  let header = document.getElementsByClassName("header")[0];
+  let menus = document.getElementsByClassName("navigation-menu");
+
+  for (let menu of menus) {
+    if (menu.classList.contains("display-small-none")) {
+      menu.classList.remove("display-small-none");
+      header.classList.add("sideDrawer-header");
+    } else {
+      menu.classList.add("display-small-none");
+      header.classList.remove("sideDrawer-header");
+    }
+  }
 };
 
 document.addEventListener("DOMContentLoaded", () => {

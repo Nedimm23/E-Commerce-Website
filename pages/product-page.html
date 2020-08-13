@@ -18,101 +18,43 @@
 </head>
 
 <body>
-    <div class="grid-container">
-        <header class="header">
-            <!-- navbar -->
-            <nav class="navbar">
-                <div class="navbar-items">
-                    <div class="navbar-left">
-                        <a style="text-decoration: none;" href="./category-page.html" class="item">Women</a>
-                        <a style="text-decoration: none;" class="item">Men</a>
-                        <a style="text-decoration: none;" class="sale">Sale</a>
-                    </div>
-                    <div class="navbar-center">
-                        <a href="../index.html">
-                            <img src="../assets/images/Vector.png">
-                        </a>
-                    </div>
-                    <div class="navbar-right">
-                        <a style="text-decoration: none;" class="item">Contact</a>
-                        <a style="text-decoration: none;" class="item">Sign In</a>
-                        <div class="cart-btn" onclick="showCart()">
-                            <div class="cart-items">0</div>
-                            <p>Cart</p>
-                        </div>
-                    </div>
 
-                </div>
-            </nav>
-            <!-- end of navbar -->
-        </header>
-
-        <!-- cart -->
-        <div class="cart-overlay">
-            <div class="cart">
-                <span class="close-cart" onclick="hideCart()">
-                    <i class="fas fa-window-close"></i>
-                </span>
-                <h2>Cart</h2>
-                <div class="cart-content">
-                    <!-- cart item -->
-                    <div class="cart-item">
-                        <img src="../assets/images/women-product-1.png" alt="product" />
-                        <div>
-                            <h4>RECYCLED POLYESTER PERFORMANCE PARKA</h4>
-                            <h5>€135 x 1</h5>
-                        </div>
-                    </div>
-                    <!-- end of cart item -->
-                    <div class="cart-item">
-                        <img src="../assets/images/women-fashion-3.png" alt="product" />
-                        <div>
-                            <h4>RECYCLED POLYESTER PERFORMANCE PARKA</h4>
-                            <h5>€145 x 2</h5>
-                        </div>
-                    </div>
-
-                </div>
-                <hr>
-                <div class="cart-footer">
-                    <div class="taxes">
-                        <!-- <h5>Subtotal <span class="cart-total">€425</span></h5>
-                        <h5>Taxes <span class="cart-total">€81</span></h5> -->
-                    </div>
-                    <hr>
-                    <div class="total">
-                        <h3>Total: €<span class="cart-total">0</span></h3>
-                    </div>
-                    <div class="button"><a href="./checkout-page.html">
-                            <button class="btn">Checkout</button></a>
-                    </div>
-                </div>
+    <div class="product">
+        <nav class="header">
+            <ul class="navigation-menu main-navigation display-block display-small-none">
+                <li class="navigation-link-left"><a href="./category-page.html">Women</a></li>
+                <li class="navigation-link-left"><a href="">Men</a></li>
+                <li class="navigation-link-left"><a class="highlight-color" href="">Sale</a></li>
+            </ul>
+            <div class="logo"><a href="../index.html">
+                    <img src="../assets/images/cos-logo.png">
+                </a></div>
+            <div class="sideDrawer display-none display-small">
+                <button onclick="sideDrawer()" class="sideDrawer-button"><i class="fa fa-bars fa-lg"></i>
+                </button>
             </div>
+            <ul class="navigation-menu secondary-navigation display-block display-small-none">
+                <li class="navigation-link-right"><a href="">Contact</a></li>
+                <li class="navigation-link-right"><a href="">Sign In</a></li>
+                <li class="navigation-link-right">
+                    <div class="cart-btn" onclick="showCart()"><span>Cart</span>
+                        <div class="cart-items"><span class="cart-value">0</span></div>
+                    </div>
+                </li>
+            </ul>
+            <!-- cart modal open -->
+        </nav>
+
+
+        <div class="product-main-content" id="test">
+
         </div>
-        <!-- end of cart -->
+        <div class="product-bottom" id="test2">
 
-        <!-- <div id="test"></div> -->
-        <main class="main">
-            <div class="container" id="test">
+        </div>
+        <footer class="footer"><span class="footer-copyright">Copyright 2020</span></footer>
+    </div>
 
-            </div>
-
-            <div class="container-bottom">
-                <section class="products">
-                    <div class="products-center" id="test2">
-
-                    </div>
-                </section>
-            </div>
-
-        </main>
-
-
-        <footer class="footer">
-            <div class="row">
-                <p>Copyright 2020</p>
-            </div>
-        </footer>
     </div>
 
     <script type="text/javascript" src="../products.js"></script>
