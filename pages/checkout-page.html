@@ -19,7 +19,8 @@
 <body>
     <div class="checkout">
         <nav class="checkout-header">
-            <div class="checkout-logo"><a href="../index.html">
+            <div class="checkout-logo">
+                <a href="../index.html">
                     <img src="../assets/images/cos-logo.png">
                 </a>
             </div>
@@ -36,68 +37,78 @@
             </ul>
         </nav>
         <div class="checkout-main-content">
-            <div class="form">
-                <div class="form-information">
-                    <div class="form-group">
-                        <div class="form-label"><span>Contact Information</span></div>
-                        <div class="form-contact-information form-group"><input class="form-input" type="text"
-                                placeholder="Email"></div>
+            <div class="checkout-information">
+                <div>
+                    <div class="checkout-label"><span>Contact Information</span></div>
+                    <div class="checkout-contact-information"><input class="checkout-input" type="text" name="email"
+                            placeholder="Email"></div>
+                </div>
+                <div>
+                    <div class="checkout-label"><span>Shipping Address</span></div>
+                    <div class="checkout-width-50">
+                        <div><input class="checkout-input" type="text" name="firstName" placeholder="First Name"></div>
+                        <div><input class="checkout-input" type="text" name="lastName" placeholder="Last Name"></div>
                     </div>
                     <div>
-                        <div class="form-label"><span>Shipping Address</span></div>
-                        <div class="form-width-50"><input class="form-input" type="text" placeholder="First Name"><input
-                                class="form-input" type="text" placeholder="Last Name"></div>
-                        <div><input class="form-input" type="text" placeholder="Company"><input class="form-input"
-                                type="text" placeholder="Address"><input class="form-input" type="text"
-                                placeholder="Apartment, suite, etc. (optional)"></div>
-                        <div class="form-width-50"><input class="form-input" type="text"
-                                placeholder="Postal Code"><input class="form-input" type="text" placeholder="City">
+                        <div><input class="checkout-input" type="text" placeholder="Company (optional)"></div>
+                        <div><input class="checkout-input" type="text" name="address" placeholder="Address"></div>
+                        <div><input class="checkout-input" type="text" placeholder="Apartment, suite, etc. (optional)">
                         </div>
-                        <div><input class="form-input" type="text" placeholder="Country/Region"><input
-                                class="form-input" type="text" placeholder="Phone (optional)"></div>
                     </div>
-                    <div><a href="./payment-page.html"><button class="block-button">
-                                Continue to Payment</button></a></div>
+                    <div class="checkout-width-50">
+                        <div><input class="checkout-input" type="text" name="postalCode" placeholder="Postal Code">
+                        </div>
+                        <div><input class="checkout-input" type="text" name="city" placeholder="City"></div>
+                    </div>
+                    <div><input class="checkout-input" type="text" name="countryOrRegion"
+                            placeholder="Country/Region"><input class="checkout-input" type="text"
+                            placeholder="Phone (optional)"></div>
                 </div>
+                <div><a href="./payment-page.html"><button class="block-button">Continue to Payment</button></a></div>
             </div>
-            <div class="cart">
-                <div class="cart-header"><span class="cart-text">Cart</span></div>
+            <div class="cart display-none">
+                <div class="cart-header"><span>Cart</span>
+                </div>
                 <div class="cart-main-content">
-                    <div class="cart-products">
-                        <div class="cart-product"><img class="cart-image" src="../assets/images/women-product-1.png"
-                                alt="cart-product">
-                            <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
-                                    PARKA</span><span class="cart-price">€ 135 x 1</span></div>
-                        </div>
-                        <div class="cart-product"><img class="cart-image" src="../assets/images/women-fashion-3.png"
-                                alt="cart-product">
-                            <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
-                                    PARKA</span><span class="cart-price">€ 145 x 2</span></div>
-                        </div>
+                    <section class="cart-product"><a class="product-link"><img class="product-image"
+                                src="../assets/images/women-product-1.png" alt="Product-11">
+                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                    PERFORMANCE
+                                    PARKA 1</span><span class="cart-product-price">€135</span><span
+                                    class="product-quantity"> x 3</span>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="cart-product"><a class="product-link"><img class="product-image"
+                                src="../assets/images/women-fashion-3.png" alt="Product-11">
+                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                    PERFORMANCE
+                                    PARKA 3</span><span class="cart-product-price">€145</span><span
+                                    class="product-quantity"> x 2</span>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="cart-product"><a class="product-link"><img class="product-image"
+                                src="../assets/images/women-fashion-4.png" alt="Product-11">
+                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                    PERFORMANCE
+                                    PARKA 7</span><span class="cart-product-price">€125</span><span
+                                    class="product-quantity"> x 5</span>
+                            </div>
+                        </a>
+                    </section>
 
-                    </div>
                 </div>
                 <div class="cart-footer">
-                    <div class="cart-subtotal"><span class="cart-text">Subtotal</span><span
-                            class="cart-subprice">€425</span>
-                    </div>
-                    <div class="cart-taxes"><span class="cart-text">Taxes</span><span class="cart-value">€81</span>
-                    </div>
-                    <div class="cart-total"><span class="cart-text">Total</span><span class="cart-value">€506</span>
-                    </div>
-                    <div class="cart-checkout"><a class="block-button" href="">Checkout</a></div>
+                    <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
+                    <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
+                    <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
                 </div>
             </div>
 
-
         </div>
+        <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span></footer>
 
-
-        <footer class="footer">
-            <div class="row">
-                <p>Copyright 2020</p>
-            </div>
-        </footer>
     </div>
 </body>
 

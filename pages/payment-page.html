@@ -39,59 +39,62 @@
                 </ul>
             </nav>
             <div class="checkout-main-content">
-                <div class="form">
-                    <div class="form-information">
-                        <div class="form-payment display-none">
-                            <div class="checkout-title"><span>Payment provider</span></div>
-                            <div class="form-payment-main-content">
-                                <div class="form-payment-method paypal"></div>
-                                <div class="form-payment-method stripe"></div>
-                                <div class="form-payment-method apple-pay"></div>
-                                <div class="form-payment-method klarna"></div>
-                                <div class="form-confirm"><a href="./order.html"><button class="block-button">Continue
-                                            to Confirm</button></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="checkout-payment">
+                    <div class="checkout-title"><span>Payment provider</span></div>
+                    <div class="checkout-payment-options">
+                        <div class="checkout-payment-method paypal"></div>
+                        <div class="checkout-payment-method stripe"></div>
+                        <div class="checkout-payment-method apple-pay"></div>
+                        <div class="checkout-payment-method klarna"></div>
                     </div>
+                    <div class="checkout-confirm"><a href="./order.html"><button class="block-button">Continue to
+                                Confirm</button></a></div>
                 </div>
-                <div class="cart">
-                    <div class="cart-header"><span class="cart-text">Cart</span></div>
+                <div class="cart display-none">
+                    <div class="cart-header"><span>Cart</span>
+                    </div>
                     <div class="cart-main-content">
-                        <div class="cart-products">
-                            <div class="cart-product"><img class="cart-image" src="../assets/images/women-product-1.png"
-                                    alt="cart-product">
-                                <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
-                                        PARKA</span><span class="cart-price">€ 135 x 1</span></div>
-                            </div>
-                            <div class="cart-product"><img class="cart-image" src="../assets/images/women-fashion-3.png"
-                                    alt="cart-product">
-                                <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
-                                        PARKA</span><span class="cart-price">€ 145 x 2</span></div>
-                            </div>
+                        <section class="cart-product"><a class="product-link"><img class="product-image"
+                                    src="../assets/images/women-product-1.png" alt="Product-11">
+                                <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                        PERFORMANCE
+                                        PARKA 1</span><span class="cart-product-price">€135</span><span
+                                        class="product-quantity"> x
+                                        3</span>
+                                </div>
+                            </a>
+                        </section>
+                        <section class="cart-product"><a class="product-link"><img class="product-image"
+                                    src="../assets/images/women-fashion-3.png" alt="Product-11">
+                                <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                        PERFORMANCE
+                                        PARKA 3</span><span class="cart-product-price">€145</span><span
+                                        class="product-quantity"> x
+                                        2</span>
+                                </div>
+                            </a>
+                        </section>
+                        <section class="cart-product"><a class="product-link"><img class="product-image"
+                                    src="../assets/images/women-fashion-4.png" alt="Product-11">
+                                <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                        PERFORMANCE
+                                        PARKA 7</span><span class="cart-product-price">€125</span><span
+                                        class="product-quantity"> x
+                                        5</span>
+                                </div>
+                            </a>
+                        </section>
 
-                        </div>
                     </div>
                     <div class="cart-footer">
-                        <div class="cart-subtotal"><span class="cart-text">Subtotal</span><span
-                                class="cart-subprice">€425</span>
-                        </div>
-                        <div class="cart-taxes"><span class="cart-text">Taxes</span><span class="cart-value">€81</span>
-                        </div>
-                        <div class="cart-total"><span class="cart-text">Total</span><span class="cart-value">€506</span>
-                        </div>
-
+                        <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
+                        <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
+                        <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
                     </div>
                 </div>
 
-
             </div>
-
-
-            <footer class="footer">
-                <div class="row">
-                    <p>Copyright 2020</p>
-                </div>
+            <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span>
             </footer>
         </div>
 

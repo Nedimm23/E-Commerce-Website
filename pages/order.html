@@ -2,14 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="../assets/images/cos-logo.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/cos-logo.png" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,7 +18,8 @@
 <body>
     <div class="checkout">
         <nav class="checkout-header">
-            <div class="checkout-logo"><a href="../index.html">
+            <div class="checkout-logo">
+                <a href="../index.html">
                     <img src="../assets/images/cos-logo.png">
                 </a>
             </div>
@@ -39,69 +36,51 @@
             </ul>
         </nav>
         <div class="checkout-main-content">
-            <div class="form">
-                <div class="form-information">
-                    <div class="checkout-confirm display-none">
-                        <div class="checkout-confirm-main-content">
-                            <div class="checkout-confirm-title"><span> Confirm</span></div>
-                            <div class="checkout-confirm-information"><span
-                                    class="checkout-confirm-email">dzibra_23@hotmail.com</span><span
-                                    class="checkout-confirm-full-name">Nedim Džibrić</span><span
-                                    class="checkout-confirm-address">Redžepa
-                                    ef. Muminhodžića 16</span><span class="checkout-confirm-city">Lukavac</span><span
-                                    class="checkout-confirm-country">Bosnia
-                                    and Herzegovina</span><span class="checkout-confirm-phone-number">+387 61 644
-                                    989</span>
-                                <div><span class="checkout-confirm-payment-method">Stripe</span><span
-                                        class="checkout-confirm-email-2">(dzibra_23@hotmail.com)</span></div>
-                            </div>
-                            <div class="checkout-confirm-button" id="mess">
-                                <button class="block-button" onclick="messageConfirm()">Order
-                                </button>
-                                <p id="mess"></p>;
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="checkout-confirm">
+                <div class="checkout-title"><span>Confirm</span></div>
+                <div class="checkout-information"><span class="checkout-email">dzibra_23@hotmail.com</span><span
+                        class="checkout-full-name">Nedim Džibrić</span><span class="checkout-company">sadsad</span><span
+                        class="checkout-full-address">Redžepa efendije Muminhodžića 16, Stan broj 15</span><span
+                        class="checkout-postal-code">75300 Lukavac</span><span
+                        class="checkout-country-or-region">Lukavac</span><span class="checkout-phone-number">061 644
+                        989</span><span class="checkout-payment-method">Apple Pay (dzibra_23@hotmail.com) </span></div>
+                <div class="checkout-button"><button class="block-button">Order</button></div>
             </div>
-            <div class="cart">
-                <div class="cart-header"><span class="cart-text">Cart</span></div>
+            <div class="cart display-none">
+                <div class="cart-header"><span>Cart</span>
+                </div>
                 <div class="cart-main-content">
-                    <div class="cart-products">
-                        <div class="cart-product"><img class="cart-image" src="../assets/images/women-product-1.png"
-                                alt="cart-product">
-                            <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
-                                    PARKA</span><span class="cart-price">€ 135 x 1</span></div>
-                        </div>
-                        <div class="cart-product"><img class="cart-image" src="../assets/images/women-fashion-3.png"
-                                alt="cart-product">
-                            <div class="cart-information"><span class="cart-name">RECYCLED POLYESTER PERFORMANCE
-                                    PARKA</span><span class="cart-price">€ 145 x 2</span></div>
-                        </div>
+                    <section class="cart-product"><a class="product-link"><img class="product-image"
+                                src="../assets/images/women-product-1.png" alt="Product-11">
+                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                    PERFORMANCE
+                                    PARKA 1</span><span class="cart-product-price">€135</span><span
+                                    class="product-quantity"> x
+                                    3</span>
+                            </div>
+                        </a>
+                    </section>
+                    <section class="cart-product"><a class="product-link"><img class="product-image"
+                                src="../assets/images/women-fashion-3.png" alt="Product-11">
+                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
+                                    PERFORMANCE
+                                    PARKA 3</span><span class="cart-product-price">€145</span><span
+                                    class="product-quantity"> x
+                                    2</span>
+                            </div>
+                        </a>
+                    </section>
 
-                    </div>
                 </div>
                 <div class="cart-footer">
-                    <div class="cart-subtotal"><span class="cart-text">Subtotal</span><span
-                            class="cart-subprice">€425</span>
-                    </div>
-                    <div class="cart-taxes"><span class="cart-text">Taxes</span><span class="cart-value">€81</span>
-                    </div>
-                    <div class="cart-total"><span class="cart-text">Total</span><span class="cart-value">€506</span>
-                    </div>
-
+                    <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
+                    <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
+                    <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
                 </div>
             </div>
 
-
         </div>
-
-
-        <footer style="z-index: 50;" class="footer">
-            <div class="row">
-                <p>Copyright 2020</p>
-            </div>
-        </footer>
+        <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span></footer>
     </div>
 
     <script src="../messageConfirm.js"></script>
