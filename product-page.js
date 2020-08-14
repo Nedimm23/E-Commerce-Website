@@ -70,12 +70,12 @@ class ProductPage {
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
                 </a></section>
-            <section class="product"><a class="product-link" href="/women/11"><img class="product-image"
+            <section class="product"><a class="product-link" href=""><img class="product-image"
                         src="${this.product.image3}" alt="Product-11">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
                 </a></section>
-            <section class="product"><a class="product-link" href="/women/12"><img class="product-image"
+            <section class="product"><a class="product-link" href=""><img class="product-image"
                         src="${this.product.image4}" alt="Product-12">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>

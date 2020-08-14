@@ -10,7 +10,6 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="stylesheet" href="./styles/cart-modal.css" />
 
 </head>
 
@@ -19,101 +18,50 @@
 
     <div class="home">
 
-        <header class="header">
-            <!-- navbar -->
-            <nav class="navbar">
-                <div class="navbar-items">
-                    <div class="navbar-left">
-                        <a style="text-decoration: none;" href="./pages/category-page.html" class="item">Women</a>
-                        <a style="text-decoration: none;" class="item">Men</a>
-                        <a style="text-decoration: none;" class="sale">Sale</a>
+        <nav class="header">
+            <ul class="navigation-menu main-navigation display-block display-small-none">
+                <li class="navigation-link-left"><a href="./pages/category-page.html">Women</a></li>
+                <li class="navigation-link-left"><a href="">Men</a></li>
+                <li class="navigation-link-left"><a class="highlight-color" href="">Sale</a></li>
+            </ul>
+            <div class="logo"><a href="../index.html">
+                    <img src="../assets/images/cos-logo.png">
+                </a></div>
+            <div class="sideDrawer display-none display-small">
+                <button onclick="sideDrawer()" class="sideDrawer-button"><i class="fa fa-bars fa-lg"></i>
+                </button>
+            </div>
+            <ul class="navigation-menu secondary-navigation display-block display-small-none">
+                <li class="navigation-link-right"><a href="">Contact</a></li>
+                <li class="navigation-link-right"><a href="">Sign In</a></li>
+                <li class="navigation-link-right">
+                    <div class="cart-btn" onclick="openAndCloseCartModal()"><span>Cart</span>
+                        <div class="cart-items">0</div>
                     </div>
-                    <div class="navbar-center">
-                        <img src="./assets/images/cos-logo.png">
-                    </div>
-                    <div class="navbar-right">
-                        <a style="text-decoration: none;" class="item">Contact</a>
-                        <a style="text-decoration: none;" class="item">Sign In</a>
-                        <div class="cart-btn" onclick="showCart()">
-                            <div class="cart-items"></div>
-                            <p>Cart</p>
-                        </div>
-                    </div>
+                </li>
+            </ul>
+            <!-- cart modal open -->
+
+            <div class="cart display-none">
+                <div class="cart-header">
+                    <span>Cart</span>
+                    <span onclick="openAndCloseCartModal()" class="cart-close"><i class="fa fa-times"></i>
+                    </span>
+                </div>
+                <div class="cart-main-content">
 
                 </div>
-            </nav>
-            <!-- end of navbar -->
-        </header>
-
-        <!-- cart -->
-        <div class="cart-overlay">
-            <div class="cart">
-                <span class="close-cart" onclick="hideCart()">
-                    <i class="fas fa-window-close"></i>
-                </span>
-                <h2>Cart</h2>
-                <div class="cart-content">
-                    <!-- cart item -->
-
-                    <!-- end of cart item -->
-
-                </div>
-                <hr>
                 <div class="cart-footer">
-                    <div class="taxes">
-                        <h5>Subtotal <span class="cart-total">€</span></h5>
-                        <h5>Taxes <span class="cart-total">€</span></h5>
-                    </div>
-                    <hr>
-                    <div class="total">
-                        <h3>Total<span class="cart-total">€</span></h3>
-                    </div>
-                    <div class="button">
-                        <a href="./pages/checkout-page.html">
-                            <button class="btn">Checkout</button></a>
+                    <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€</span></div>
+                    <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€</span></div>
+                    <div class="cart-total"><span>Total</span><span class="cart-value">€</span></div>
+                    <div class="cart-checkout"><a class="block-button" href="./pages/checkout-page.html">Checkout</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- end of cart -->
 
-        <div class="cart display-block">
-            <div class="cart-header"><span>Cart</span><span class="cart-close"><i class="fa fa-times"></i></span></div>
-            <div class="cart-main-content">
-                <figure class="product"><a class="product-link" href="/women/1"><img class="product-image"
-                            src="https://placehold.co/315x453/CCCCCC/FFF?text=Product" alt="Product">
-                        <figcaption class="product-image-caption"><span class="product-name">Product</span><span
-                                class="product-price">€100</span><span class="product-quantity"> x 1</span></figcaption>
-                    </a></figure>
-                <figure class="product"><a class="product-link" href="/women/6"><img class="product-image"
-                            src="https://placehold.co/315x453/CCCCCC/FFF?text=Product-6" alt="Product-6">
-                        <figcaption class="product-image-caption"><span class="product-name">Product-6</span><span
-                                class="product-price">€100</span><span class="product-quantity"> x 3</span></figcaption>
-                    </a></figure>
-                <figure class="product"><a class="product-link" href="/women/2"><img class="product-image"
-                            src="https://placehold.co/315x453/CCCCCC/FFF?text=Product-2" alt="Product-2">
-                        <figcaption class="product-image-caption"><span class="product-name">Product-2</span><span
-                                class="product-price">€100</span><span class="product-quantity"> x 5</span></figcaption>
-                    </a></figure>
-                <figure class="product"><a class="product-link" href="/women/10"><img class="product-image"
-                            src="https://placehold.co/315x453/CCCCCC/FFF?text=Product-10" alt="Product-10">
-                        <figcaption class="product-image-caption"><span class="product-name">Product-10</span><span
-                                class="product-price">€100</span><span class="product-quantity"> x 3</span></figcaption>
-                    </a></figure>
-                <figure class="product"><a class="product-link" href="/women/3"><img class="product-image"
-                            src="https://placehold.co/315x453/CCCCCC/FFF?text=Product-3" alt="Product-3">
-                        <figcaption class="product-image-caption"><span class="product-name">Product-3</span><span
-                                class="product-price">€100</span><span class="product-quantity"> x 1</span></figcaption>
-                    </a></figure>
-            </div>
-            <div class="cart-footer">
-                <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€</span></div>
-                <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€</span></div>
-                <div class="cart-total"><span>Total</span><span class="cart-value">€</span></div>
-                <div class="cart-checkout"><a class="block-button" href="/checkout">Checkout</a></div>
-            </div>
-        </div>
-
+            <!-- cart modal closed -->
+        </nav>
 
 
         <div class="main-content">

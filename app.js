@@ -6,7 +6,7 @@ const cartDOM = document.querySelector(".cart");
 const cartOverlay = document.querySelector(".cart-overlay");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
-const cartContent = document.querySelector(".cart-content");
+const cartContent = document.querySelector(".cart-main-content");
 
 const cartStorageKey = "cartStorage";
 
@@ -123,17 +123,17 @@ renderCartProducts = () => {
     products = getProductsInCart();
 
   products.forEach((product) => {
-    content += `       
-            <!-- cart item -->
-            <div class="cart-item">
-                <img src="${product.image}" alt="product" />
-                <div>
-                    <h4>${product.title}</h4>
-                    <h5>€${product.price} x 1</h5>
-                    <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
-                </div>
-            </div>
-            <!-- end of cart item -->
+    content += `
+            <section class="cart-product">
+                  <a class="product-link" onclick="redirect(${product.id})" >                        
+                    <img class="product-image" src="${product.image}" alt="Product">
+                      <div class="product-image-caption"><span class="cart-product-name">${product.title}</span><span
+                          class="cart-product-price">€${product.price}</span><span class="product-quantity"> x 1</span>
+                          <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
+                      </div>
+                  </a>                        
+            </section>
+                       
             `;
     index++;
   });
@@ -178,11 +178,34 @@ hideCart = () => {
   cartDOM.classList.remove("showCart");
 };
 
+openAndCloseCartModal = () => {
+  renderCartProducts();
+  let cart = document.getElementsByClassName("cart")[0];
+
+  if (cart.classList.contains("display-none")) {
+    cart.classList.remove("display-none");
+    cart.classList.add("display-block");
+  } else {
+    cart.classList.remove("display-block");
+    cart.classList.add("display-none");
+  }
+};
+
 window.addEventListener("scroll", () => {
   if (window.scrollY > 0 && window.innerWidth > 575.98) {
-    document.getElementsByClassName("cart")[0].classList.add("extend");
+    document
+      .getElementsByClassName("cart-header")[0]
+      .classList.add("cart-header-expand");
+    document
+      .getElementsByClassName("cart-main-content")[0]
+      .classList.add("cart-main-content-expand");
   } else {
-    document.getElementsByClassName("cart")[0].classList.remove("extend");
+    document
+      .getElementsByClassName("cart-header")[0]
+      .classList.remove("cart-header-expand");
+    document
+      .getElementsByClassName("cart-main-content")[0]
+      .classList.remove("cart-main-content-expand");
   }
 });
 

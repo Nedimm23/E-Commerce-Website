@@ -9,73 +9,57 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/category-page.css" />
-    <link rel="stylesheet" href="../styles/cart-modal.css" />
+    <!-- <link rel="stylesheet" href="../styles/cart-modal.css" /> -->
     <!-- <link rel="stylesheet" href="../styles/index.css" /> -->
     <title>Women Category Page</title>
 </head>
 
 <body>
 
-    <header class="header">
-        <!-- navbar -->
-        <nav class="navbar">
-            <div class="navbar-items">
-                <div class="navbar-left">
-                    <a style="text-decoration: none;" class="item">Women</a>
-                    <a style="text-decoration: none;" class="item">Men</a>
-                    <a style="text-decoration: none;" class="sale">Sale</a>
+    <nav class="header">
+        <ul class="navigation-menu main-navigation display-block display-small-none">
+            <li class="navigation-link-left"><a href="./category-page.html">Women</a></li>
+            <li class="navigation-link-left"><a href="">Men</a></li>
+            <li class="navigation-link-left"><a class="highlight-color" href="">Sale</a></li>
+        </ul>
+        <div class="logo"><a href="../index.html">
+                <img src="../assets/images/cos-logo.png">
+            </a></div>
+        <div class="sideDrawer display-none display-small">
+            <button onclick="sideDrawer()" class="sideDrawer-button"><i class="fa fa-bars fa-lg"></i>
+            </button>
+        </div>
+        <ul class="navigation-menu secondary-navigation display-block display-small-none">
+            <li class="navigation-link-right"><a href="">Contact</a></li>
+            <li class="navigation-link-right"><a href="">Sign In</a></li>
+            <li class="navigation-link-right">
+                <div class="cart-btn" onclick="openAndCloseCartModal()"><span>Cart</span>
+                    <div class="cart-items">0</div>
                 </div>
-                <div class="navbar-center">
-                    <a href="../index.html">
-                        <img src="../assets/images/cos-logo.png">
-                    </a>
-                </div>
-                <div class="navbar-right">
-                    <a style="text-decoration: none;" class="item">Contact</a>
-                    <a style="text-decoration: none;" class="item">Sign In</a>
-                    <div class="cart-btn" onclick="showCart()">
-                        <div class="cart-items">0</div>
-                        <p>Cart</p>
-                    </div>
-                </div>
+            </li>
+        </ul>
+        <!-- cart modal open -->
+
+        <div class="cart display-none">
+            <div class="cart-header">
+                <span>Cart</span>
+                <span onclick="openAndCloseCartModal()" class="cart-close"><i class="fa fa-times"></i>
+                </span>
+            </div>
+            <div class="cart-main-content">
 
             </div>
-        </nav>
-        <!-- end of navbar -->
-    </header>
-
-    <!-- cart -->
-    <div class="cart-overlay">
-        <div class="cart">
-            <span class="close-cart" onclick="hideCart()">
-                <i class="fas fa-window-close"></i>
-            </span>
-            <h2>Cart</h2>
-            <div class="cart-content">
-                <!-- cart item -->
-
-                <!-- end of cart item -->
-
-            </div>
-            <hr>
             <div class="cart-footer">
-                <div class="taxes">
-                    <h5>Subtotal <span class="cart-total">€</span></h5>
-                    <h5>Taxes <span class="cart-total">€</span></h5>
-                </div>
-                <hr>
-                <div class="total">
-                    <h3>Total<span class="cart-total">€</span></h3>
-                </div>
-                <div class="button">
-                    <a href="./checkout-page.html">
-                        <button class="btn">Checkout</button>
-                    </a>
-                </div>
+                <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€</span></div>
+                <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€</span></div>
+                <div class="cart-total"><span>Total</span><span class="cart-value">€</span></div>
+                <div class="cart-checkout"><a class="block-button" href="./checkout-page.html">Checkout</a></div>
             </div>
         </div>
-    </div>
-    <!-- end of cart -->
+
+        <!-- cart modal closed -->
+    </nav>
+
 
     <main class="main">
         <section class="products">
@@ -88,7 +72,7 @@
         </section>
     </main>
 
-    <div id="test"></div>
+
     <script type="text/javascript" src="../products.js"></script>
     <script src="../app.js"></script>
     <script src="../init.js"></script>

@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/cart-modal.css" />
+
 
     <!-- <link rel="stylesheet" href="../styles/category-page.css" /> -->
     <link rel="stylesheet" href="../styles/product-page.css" />
@@ -37,13 +37,34 @@
                 <li class="navigation-link-right"><a href="">Contact</a></li>
                 <li class="navigation-link-right"><a href="">Sign In</a></li>
                 <li class="navigation-link-right">
-                    <div class="cart-btn" onclick="showCart()"><span>Cart</span>
-                        <div class="cart-items"><span class="cart-value">0</span></div>
+                    <div class="cart-btn" onclick="openAndCloseCartModal()"><span>Cart</span>
+                        <div class="cart-items">0</div>
                     </div>
                 </li>
             </ul>
             <!-- cart modal open -->
+
+            <div class="cart display-none">
+                <div class="cart-header">
+                    <span>Cart</span>
+                    <span onclick="openAndCloseCartModal()" class="cart-close"><i class="fa fa-times"></i>
+                    </span>
+                </div>
+                <div class="cart-main-content">
+
+                </div>
+                <div class="cart-footer">
+                    <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€</span></div>
+                    <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€</span></div>
+                    <div class="cart-total"><span>Total</span><span class="cart-value">€</span></div>
+                    <div class="cart-checkout"><a class="block-button" href="./checkout-page.html">Checkout</a></div>
+                </div>
+            </div>
+
+            <!-- cart modal closed -->
         </nav>
+
+
 
 
         <div class="product-main-content" id="test">
@@ -55,7 +76,7 @@
         <footer class="footer"><span class="footer-copyright">Copyright 2020</span></footer>
     </div>
 
-    </div>
+
 
     <script type="text/javascript" src="../products.js"></script>
     <script src="../app.js"></script>
