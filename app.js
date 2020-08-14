@@ -125,13 +125,13 @@ renderCartProducts = () => {
   products.forEach((product) => {
     content += `
             <section class="cart-product">
-                  <a class="product-link" onclick="redirect(${product.id})" >                        
+                  <div class="product-link">                        
                     <img class="product-image" src="${product.image}" alt="Product">
                       <div class="product-image-caption"><span class="cart-product-name">${product.title}</span><span
                           class="cart-product-price">€${product.price}</span><span class="product-quantity"> x 1</span>
                           <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
-                      </div>
-                  </a>                        
+                      </div>                      
+                  </div>                        
             </section>
                        
             `;
