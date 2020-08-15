@@ -1,5 +1,11 @@
 console.log("products", PRODUCTS_LIST);
 
+function redirect(id) {
+  // console.log(id);
+  window.location.href = `./product-page.html#${id}`;
+  // window.location.hash = id;
+}
+
 class ProductPage {
   constructor() {
     const { hash } = window.location;
@@ -65,21 +71,23 @@ class ProductPage {
         <div class="product-bottom-title">
           <span>You might also like</span>
         </div>
-            <section class="product"><a class="product-link" href=""><img class="product-image"
-                        src="${this.product.image2}" alt="Product-10">
+            <section class="product"><a class="product-link" ><img class="product-image"
+                        src="${this.product.image}" alt="${this.product.title}">
+                    <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
+                            class="product-price">€ ${this.product.price}</span></div>
+                </a>
+            </section>
+            <section class="product"><a class="product-link" href="product-page.html#${this.product.id}"><img class="product-image"
+                        src="${this.product.image4}" alt="${this.product.title}">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
                 </a></section>
-            <section class="product"><a class="product-link" href=""><img class="product-image"
-                        src="${this.product.image3}" alt="Product-11">
+            <section class="product"><a class="product-link" href="/pages/product-page.html#${this.product.id}"><img class="product-image"
+                        src="${this.product.image}" alt="${this.product.title}">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
-                </a></section>
-            <section class="product"><a class="product-link" href=""><img class="product-image"
-                        src="${this.product.image4}" alt="Product-12">
-                    <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
-                            class="product-price">€ ${this.product.price}</span></div>
-                </a></section>
+                </a>
+            </section>
         
     `;
     // console.log(myHTML);

@@ -146,6 +146,7 @@ section {
 .cart-product .product-image {
   width: 80px;
   height: 80px;
+  object-fit: cover;
 }
 
 .cart-product .product-image-caption {
@@ -253,7 +254,7 @@ section {
   margin: 0;
   background-color: #f5f7f6;
 }
-.block-button {
+.checkout .block-button {
   width: 50%;
   margin-top: 20px;
   float: right;
@@ -377,11 +378,11 @@ section {
 }
 
 .paypal {
-  background-image: url("/assets/payments/klarna.png");
+  background-image: url("/assets/payments/paypal.png");
 }
 
 .stripe {
-  background-image: url("/assets/payments/paypal.png");
+  background-image: url("/assets/payments/stripe.png");
 }
 
 .apple-pay {
@@ -389,7 +390,7 @@ section {
 }
 
 .klarna {
-  background-image: url("/assets/payments/stripe.png");
+  background-image: url("/assets/payments/klarna.png");
 }
 
 .checkout-chosen-method {
@@ -398,7 +399,7 @@ section {
   border-radius: 4px;
 }
 
-.checkout-confirm {
+.checkout-payment .checkout-confirm {
   grid-area: 3 / 3 / 3 / 5;
   width: 100%;
 }
@@ -462,7 +463,7 @@ section {
 }
 
 @media (max-width: 991.98px) {
-  .block-button {
+  .checkout .block-button {
     width: 100%;
   }
 

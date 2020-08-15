@@ -269,6 +269,7 @@ section {
 .cart-product .product-image {
   width: 80px;
   height: 80px;
+  object-fit: cover;
 }
 
 .cart-product .product-image-caption {
@@ -427,6 +428,7 @@ section {
   min-height: 28.3125rem;
   height: -webkit-fill-available;
   transition: var(--mainTransition);
+  object-fit: cover;
 }
 .img-container:hover .product-img {
   opacity: 0.5;

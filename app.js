@@ -12,9 +12,9 @@ class Product {
   async getProducts() {
     try {
       const allProducts = PRODUCTS_LIST.map((product) => {
-        const { title, price, id, images } = product;
+        const { title, price, id, image } = product;
 
-        return { id, title, price, images };
+        return { id, title, price, image };
       });
 
       return allProducts;
