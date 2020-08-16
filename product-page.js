@@ -6,6 +6,22 @@ function redirect(id) {
   // window.location.hash = id;
 }
 
+fadingImages = (event) => {
+  let images = document.getElementsByClassName(
+    "product-left-content-gallery-image"
+  );
+
+  for (let image of images) {
+    image.classList.remove("product-left-content-active-image");
+  }
+
+  event.target.classList.add("product-left-content-active-image");
+
+  document
+    .getElementsByClassName("product-left-content-chosen-image")[0]
+    .setAttribute("src", event.target.src);
+};
+
 class ProductPage {
   constructor() {
     const { hash } = window.location;
@@ -34,18 +50,18 @@ class ProductPage {
                     <div class="product-left-name-and-price display-none display-medium"><span
                             class="product-left-content-name">${this.product.title}</span><span
                             class="product-left-content-price">€${this.product.price}</span></div><img
-                        class="product-left-content-chosen-image"
+                         class="product-left-content-chosen-image"
                         src="${this.product.image}" alt="${this.product.title}">
                 </div>
-                <div class="product-left-content-gallery"><img
+                <div class="product-left-content-gallery"><img onclick="fadingImages(event)"
                         class="product-left-content-gallery-image product-left-content-active-image" alt="model"
-                        src="${this.product.image2}"><img
+                        src="${this.product.image2}"><img onclick="fadingImages(event)"
                         class="product-left-content-gallery-image" alt="model"
-                        src="${this.product.image3}"><img
+                        src="${this.product.image3}"><img onclick="fadingImages(event)"
                         class="product-left-content-gallery-image" alt="model"
-                        src="${this.product.image4}"><img
+                        src="${this.product.image4}"><img onclick="fadingImages(event)"
                         class="product-left-content-gallery-image" alt="model"
-                        src="${this.product.image5}"><img
+                        src="${this.product.image5}"><img onclick="fadingImages(event)"
                         class="product-left-content-gallery-image" alt="model"
                         src="${this.product.image6}"></div>
             </div>

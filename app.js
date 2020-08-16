@@ -85,6 +85,7 @@ addToCartStorage = (productId) => {
 
   localStorage.setItem(cartStorageKey, JSON.stringify(products));
   renderCartCount();
+  renderCartProducts();
 };
 
 removeFromCartStorage = (index) => {
