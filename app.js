@@ -1,7 +1,7 @@
 const productsDOM = document.querySelector(".products-center");
 const cartBtn = document.querySelector(".cart-btn");
 
-const cartDOM = document.querySelector(".cart");
+const cartModal = document.querySelector(".cart");
 const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-main-content");
@@ -119,6 +119,7 @@ renderCartCount = () => {
 };
 
 renderCartProducts = () => {
+  const el = document.querySelector("#footer");
   let content = "",
     index = 0,
     products = getProductsInCart();
@@ -129,18 +130,20 @@ renderCartProducts = () => {
 
   products.forEach((product) => {
     subtotal += product.price;
-    content += `
-                                
-              <section class="cart-product">
-                    <div class="product-link">                        
-                      <img class="product-image" src="${product.image}" alt="Product">
-                        <div class="product-image-caption"><span class="cart-product-name">${product.title}</span><span
-                            class="cart-product-price">€${product.price}</span><span class="product-quantity"> x 1</span>
-                            <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
-                        </div>                      
-                    </div>                        
-              </section>
-                      
+    content += `                               
+                                                 
+                  <section class="cart-product">
+                        <div class="product-link">                        
+                          <img class="product-image" src="${product.image}" alt="Product">
+                            <div class="product-image-caption"><span class="cart-product-name">${product.title}</span><span
+                                class="cart-product-price">€${product.price}</span><span class="product-quantity"> x 1</span>
+                                <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
+                            </div>                      
+                        </div>                        
+                  </section>
+
+                
+                     
             `;
     index++;
   });
@@ -148,17 +151,17 @@ renderCartProducts = () => {
   taxes = Math.round(subtotal * (taxPercent / 100));
   total = subtotal + taxes;
 
-  content += `
-      
-      
+  const myHTML = `     
+        
            <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€${subtotal}</span></div>
            <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€${taxes}</span></div>
            <div class="cart-total"><span>Total</span><span class="cart-value">€${total}</span></div>
-           <div class="cart-checkout"><a class="block-button" href="./pages/checkout-page.html">Checkout</a></div>     
-                 
+           <div class="cart-checkout"><a class="block-button" href="checkout-page.html">Checkout</a>     
+                       
       `;
 
   cartContent.innerHTML = content;
+  el.innerHTML = myHTML;
 };
 
 openAndCloseCartModal = () => {
@@ -221,6 +224,36 @@ sideDrawer = () => {
   }
 };
 
+getCheckoutData = () => {
+  //gettting the values
+  var email = document.getElementById("email").value;
+  var firstname = document.getElementById("firstname").value;
+  var lastname = document.getElementById("lastname").value;
+  var company = document.getElementById("company").value;
+  var address = document.getElementById("address").value;
+  var apartment = document.getElementById("apartment").value;
+  var postalCode = document.getElementById("postalCode").value;
+  var city = document.getElementById("city").value;
+  var country = document.getElementById("country").value;
+  var phone = document.getElementById("phone").value;
+  var paymentMethod = document.getElementById("paymentMethod").value;
+
+  //saving the values in local storage
+  localStorage.setItem("email", email);
+  localStorage.setItem("firstname", firstname);
+  localStorage.setItem("lastname", lastname);
+  localStorage.setItem("company", company);
+  localStorage.setItem("address", address);
+  localStorage.setItem("apartment", apartment);
+  localStorage.setItem("postalCode", postalCode);
+  localStorage.setItem("city", city);
+  localStorage.setItem("country", country);
+  localStorage.setItem("phone", phone);
+  localStorage.setItem("paymentMethod", paymentMethod);
+
+  // return false;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const product = localStorage.getItem("products");
@@ -231,4 +264,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 $(document).ready(function () {
   renderCartCount();
+  renderCartProducts();
+  getCheckoutData();
 });

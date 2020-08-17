@@ -12,6 +12,35 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/checkout.css" />
+    <script type="text/javascript">
+        document.getElementById("email").innerHTML = localStorage.getItem("email");
+        document.getElementById("firstname").innerHTML = localStorage.getItem(
+            "firstname"
+        );
+        document.getElementById("lastname").innerHTML = localStorage.getItem(
+            "lastname"
+        );
+        document.getElementById("company").innerHTML = localStorage.getItem(
+            "company"
+        );
+        document.getElementById("address").innerHTML = localStorage.getItem(
+            "address"
+        );
+        document.getElementById("apartment").innerHTML = localStorage.getItem(
+            "apartment"
+        );
+        document.getElementById("postalCode").innerHTML = localStorage.getItem(
+            "postalCode"
+        );
+        document.getElementById("city").innerHTML = localStorage.getItem("city");
+        document.getElementById("country").innerHTML = localStorage.getItem(
+            "country"
+        );
+        document.getElementById("phone").innerHTML = localStorage.getItem("phone");
+        document.getElementById("paymentMethod").innerHTML = localStorage.getItem(
+            "paymentMethod"
+        );
+    </script>
     <title>Order Page</title>
 
 
@@ -37,26 +66,31 @@
         </nav>
         <div class="checkout-main-content">
             <div class="checkout-confirm-menu">
-                <div class="checkout-title"><span>Confirm</span></div>
-                <div class="checkout-information"><span class="checkout-email">dzibra_23@hotmail.com</span><span
-                        class="checkout-full-name">Nedim Džibrić</span><span class="checkout-company">Imel</span><span
-                        class="checkout-full-address">Redžepa efendije Muminhodžića 16, Stan broj 15</span><span
-                        class="checkout-postal-code">75300 Lukavac</span><span
-                        class="checkout-country-or-region">Lukavac</span><span class="checkout-phone-number">061 644
-                        989</span><span class="checkout-payment-method-order">Apple Pay (dzibra_23@hotmail.com) </span>
+                <div class="checkout-title">
+                    <span>Confirm</span>
                 </div>
-                <div class="checkout-button"><a><button class="block-button">Order</button></a></div>
+                <div class="checkout-information">
+                    <span id="email" class="checkout-email"></span>
+                    <span id="firstname" class="checkout-full-name"></span>
+                    <span id="company" class="checkout-company"></span>
+                    <span id="address" class="checkout-full-address"></span>
+                    <span id="postalCode" class="checkout-postal-code"></span>
+                    <span id="country" class="checkout-country-or-region"></span>
+                    <span id="phone" class="checkout-phone-number"></span>
+                    <span id="paymentMethod" class="checkout-payment-method-order">Apple Pay
+                        (dzibra_23@hotmail.com)</span>
+                </div>
+                <div class="checkout-button"><a><button id="mess" class="block-button">Order</button></a></div>
             </div>
             <div class="cart display-none">
                 <div class="cart-header"><span>Cart</span>
                 </div>
                 <div class="cart-main-content">
 
+
                 </div>
-                <div class="cart-footer">
-                    <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
-                    <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
-                    <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
+                <div id="footer" class="cart-footer">
+
                 </div>
             </div>
 

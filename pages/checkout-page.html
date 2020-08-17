@@ -35,42 +35,51 @@
             </ul>
         </nav>
         <div class="checkout-main-content">
-            <div class="checkout-information">
-                <div>
-                    <div class="checkout-label"><span>Contact Information</span></div>
-                    <div class="checkout-contact-information"><input class="checkout-input" required type="text"
-                            name="email" placeholder="Email"></div>
-                </div>
-                <div>
-                    <div class="checkout-label"><span>Shipping Address</span></div>
-                    <div class="checkout-width-50">
-                        <div><input class="checkout-input" required type="text" name="firstName"
-                                placeholder="First Name"></div>
-                        <div><input class="checkout-input" required type="text" name="lastName" placeholder="Last Name">
-                        </div>
+            <form action="payment-page.html">
+                <div class="checkout-information">
+                    <div>
+                        <div class="checkout-label"><span>Contact Information</span></div>
+                        <div class="checkout-contact-information"><input class="checkout-input" required type="text"
+                                name="email" id="email" placeholder="Email"></div>
                     </div>
                     <div>
-                        <div><input class="checkout-input" required type="text" placeholder="Company (optional)"></div>
-                        <div><input class="checkout-input" required type="text" name="address" placeholder="Address">
+                        <div class="checkout-label"><span>Shipping Address</span></div>
+                        <div class="checkout-width-50">
+                            <div><input class="checkout-input" required type="text" id="firstname" name="firstName"
+                                    placeholder="First Name"></div>
+                            <div><input class="checkout-input" required type="text" id="lastname" name="lastName"
+                                    placeholder="Last Name">
+                            </div>
                         </div>
-                        <div><input class="checkout-input" required type="text"
-                                placeholder="Apartment, suite, etc. (optional)">
+                        <div>
+                            <div><input class="checkout-input" required type="text" id="company"
+                                    placeholder="Company (optional)"></div>
+                            <div><input class="checkout-input" required type="text" id="address" name="address"
+                                    placeholder="Address">
+                            </div>
+                            <div><input class="checkout-input" required type="text" id="apartment"
+                                    placeholder="Apartment, suite, etc. (optional)">
+                            </div>
+                        </div>
+                        <div class="checkout-width-50">
+                            <div><input class="checkout-input" required type="text" id="postalCode" name="postalCode"
+                                    placeholder="Postal Code">
+                            </div>
+                            <div><input class="checkout-input" required type="text" id="city" name="city"
+                                    placeholder="City"></div>
+                        </div>
+                        <div>
+                            <input class="checkout-input" type="text" id="country" required name="countryOrRegion"
+                                placeholder="Country/Region">
+                            <input class="checkout-input" required type="text" id="phone"
+                                placeholder="Phone (optional)">
                         </div>
                     </div>
-                    <div class="checkout-width-50">
-                        <div><input class="checkout-input" required type="text" name="postalCode"
-                                placeholder="Postal Code">
-                        </div>
-                        <div><input class="checkout-input" required type="text" name="city" placeholder="City"></div>
-                    </div>
-                    <div>
-                        <input class="checkout-input" type="text" required name="countryOrRegion"
-                            placeholder="Country/Region">
-                        <input class="checkout-input" required type="text" placeholder="Phone (optional)">
+                    <div><button type="submit" onclick="getCheckoutData()" class="block-button">Continue to
+                            Payment</button>
                     </div>
                 </div>
-                <div><a href="./payment-page.html"><button class="block-button">Continue to Payment</button></a></div>
-            </div>
+            </form>
         </div>
         <div class="cart display-none">
             <div class="cart-header"><span>Cart</span>
@@ -79,11 +88,9 @@
 
 
             </div>
-            <!-- <div class="cart-footer">
-                <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
-                <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
-                <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
-            </div> -->
+            <div id="footer" class="cart-footer">
+
+            </div>
         </div>
 
         <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span></footer>
