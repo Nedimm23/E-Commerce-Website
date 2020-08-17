@@ -15,7 +15,7 @@
     <title>Order Page</title>
 
 
-<body>
+<body onload="renderCartProducts()">
     <div class="checkout">
         <nav class="checkout-header">
             <div class="checkout-logo">
@@ -51,26 +51,6 @@
                 <div class="cart-header"><span>Cart</span>
                 </div>
                 <div class="cart-main-content">
-                    <section class="cart-product"><a class="product-link"><img class="product-image"
-                                src="../assets/images/women-product-1.png" alt="Product-11">
-                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                    PERFORMANCE
-                                    PARKA 1</span><span class="cart-product-price">€135</span><span
-                                    class="product-quantity"> x
-                                    3</span>
-                            </div>
-                        </a>
-                    </section>
-                    <section class="cart-product"><a class="product-link"><img class="product-image"
-                                src="../assets/images/women-fashion-3.png" alt="Product-11">
-                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                    PERFORMANCE
-                                    PARKA 3</span><span class="cart-product-price">€145</span><span
-                                    class="product-quantity"> x
-                                    2</span>
-                            </div>
-                        </a>
-                    </section>
 
                 </div>
                 <div class="cart-footer">
@@ -85,6 +65,9 @@
     </div>
 
     <script src="../messageConfirm.js"></script>
+    <script src="../products.js"></script>
+    <script src="../app.js"></script>
+
 </body>
 
 </html>

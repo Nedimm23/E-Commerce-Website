@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <head>
         <meta charset="UTF-8">
@@ -18,7 +16,7 @@
         <title>Payment Page</title>
     </head>
 
-<body>
+<body onload="renderCartProducts()">
     <div>
         <div class="checkout">
             <nav class="checkout-header">
@@ -42,10 +40,14 @@
                 <div class="checkout-payment">
                     <div class="checkout-title"><span>Payment provider</span></div>
                     <div class="checkout-payment-options">
-                        <div class="checkout-payment-method paypal"></div>
-                        <div class="checkout-payment-method stripe"></div>
-                        <div class="checkout-payment-method apple-pay"></div>
-                        <div class="checkout-payment-method klarna"></div>
+                        <div onclick="choosePaymentOption('PayPal', event)" class="checkout-payment-method paypal">
+                        </div>
+                        <div onclick="choosePaymentOption('Stripe', event)" class="checkout-payment-method stripe">
+                        </div>
+                        <div onclick="choosePaymentOption('Apple Pay', event)"
+                            class="checkout-payment-method apple-pay"></div>
+                        <div onclick="choosePaymentOption('Klarna', event)" class="checkout-payment-method klarna">
+                        </div>
                     </div>
                     <div class="checkout-confirm">
                         <a href="./order.html"><button class="block-button">Continue to
@@ -57,36 +59,7 @@
                     <div class="cart-header"><span>Cart</span>
                     </div>
                     <div class="cart-main-content">
-                        <section class="cart-product"><a class="product-link"><img class="product-image"
-                                    src="../assets/images/women-product-1.png" alt="Product-11">
-                                <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                        PERFORMANCE
-                                        PARKA 1</span><span class="cart-product-price">€135</span><span
-                                        class="product-quantity"> x
-                                        3</span>
-                                </div>
-                            </a>
-                        </section>
-                        <section class="cart-product"><a class="product-link"><img class="product-image"
-                                    src="../assets/images/women-fashion-3.png" alt="Product-11">
-                                <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                        PERFORMANCE
-                                        PARKA 3</span><span class="cart-product-price">€145</span><span
-                                        class="product-quantity"> x
-                                        2</span>
-                                </div>
-                            </a>
-                        </section>
-                        <section class="cart-product"><a class="product-link"><img class="product-image"
-                                    src="../assets/images/women-fashion-4.png" alt="Product-11">
-                                <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                        PERFORMANCE
-                                        PARKA 7</span><span class="cart-product-price">€125</span><span
-                                        class="product-quantity"> x
-                                        5</span>
-                                </div>
-                            </a>
-                        </section>
+
 
                     </div>
                     <div class="cart-footer">
@@ -100,6 +73,10 @@
             <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span>
             </footer>
         </div>
+
+        <script src="../products.js"></script>
+        <script src="../app.js"></script>
+        <script src="../init.js"></script>
 
 </body>
 

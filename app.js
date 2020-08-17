@@ -6,6 +6,8 @@ const cartItems = document.querySelector(".cart-items");
 const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-main-content");
 
+const cartSum = document.querySelector(".cart-footer");
+
 const cartStorageKey = "cartStorage";
 
 class Product {
@@ -120,54 +122,48 @@ renderCartProducts = () => {
   let content = "",
     index = 0,
     products = getProductsInCart();
+  let subtotal = 0;
+  let taxPercent = 17;
+  let taxes = 0;
+  let total = 0;
 
   products.forEach((product) => {
+    subtotal += product.price;
     content += `
-            <section class="cart-product">
-                  <div class="product-link">                        
-                    <img class="product-image" src="${product.image}" alt="Product">
-                      <div class="product-image-caption"><span class="cart-product-name">${product.title}</span><span
-                          class="cart-product-price">€${product.price}</span><span class="product-quantity"> x 1</span>
-                          <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
-                      </div>                      
-                  </div>                        
-            </section>
-                       
+                                
+              <section class="cart-product">
+                    <div class="product-link">                        
+                      <img class="product-image" src="${product.image}" alt="Product">
+                        <div class="product-image-caption"><span class="cart-product-name">${product.title}</span><span
+                            class="cart-product-price">€${product.price}</span><span class="product-quantity"> x 1</span>
+                            <span class="remove-item" onclick="removeFromCartStorage(${index})">remove</span>
+                        </div>                      
+                    </div>                        
+              </section>
+                      
             `;
     index++;
   });
 
+  taxes = Math.round(subtotal * (taxPercent / 100));
+  total = subtotal + taxes;
+
+  content += `
+      
+      
+           <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€${subtotal}</span></div>
+           <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€${taxes}</span></div>
+           <div class="cart-total"><span>Total</span><span class="cart-value">€${total}</span></div>
+           <div class="cart-checkout"><a class="block-button" href="./pages/checkout-page.html">Checkout</a></div>     
+                 
+      `;
+
   cartContent.innerHTML = content;
-};
-
-calculationPrice = () => {
-  let subtotal = 0;
-  let taxPercent = 17;
-
-  cartProducts.forEach((cartProduct) => {
-    subtotal += cartProduct.price * cartProduct.quantity;
-  });
-
-  let taxes = Math.round(subtotal * (taxPercent / 100));
-
-  setSubtotal(subtotal);
-  setTaxes(taxes);
-  setTotal(subtotal + taxes);
-};
-
-setCartValues = () => {
-  let tempTotal = 0;
-  let itemsTotal = 0;
-  cartProducts.map((cartProduct) => {
-    tempTotal += cartProduct.price * cartProduct.amount;
-    itemsTotal += cartProduct.amount;
-  });
-  cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
-  cartItems.innerText = itemsTotal;
 };
 
 openAndCloseCartModal = () => {
   renderCartProducts();
+
   let cart = document.getElementsByClassName("cart")[0];
 
   if (cart.classList.contains("display-none")) {
@@ -177,6 +173,19 @@ openAndCloseCartModal = () => {
     cart.classList.remove("display-block");
     cart.classList.add("display-none");
   }
+};
+
+choosePaymentOption = (method, event) => {
+  let paymentMethods = document.getElementsByClassName(
+    "checkout-payment-method"
+  );
+
+  for (let paymentMethod of paymentMethods) {
+    if (paymentMethod.classList.contains("checkout-chosen-method"))
+      paymentMethod.classList.remove("checkout-chosen-method");
+  }
+
+  event.target.classList.add("checkout-chosen-method");
 };
 
 window.addEventListener("scroll", () => {
@@ -217,16 +226,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const product = localStorage.getItem("products");
   // console.log(products);
 
-  ui.displayProducts();
+  ui.displayProducts(product);
 });
 
 $(document).ready(function () {
   renderCartCount();
-  $("img").click(function (e) {
-    var newclass = $(this).attr("id");
-    var oldclass = $("#full-size").attr("class");
-    $("#full-size").fadeOut(function () {
-      $("#full-size").removeClass(oldclass).addClass(newclass).fadeIn("show");
-    });
-  });
 });

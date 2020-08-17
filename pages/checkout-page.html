@@ -10,13 +10,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/checkout.css" />
-    <!-- <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/cart-modal.css" /> -->
 
     <title>Checkout Page</title>
 </head>
 
-<body>
+<body onload="renderCartProducts()">
     <div class="checkout">
         <nav class="checkout-header">
             <div class="checkout-logo">
@@ -40,80 +38,62 @@
             <div class="checkout-information">
                 <div>
                     <div class="checkout-label"><span>Contact Information</span></div>
-                    <div class="checkout-contact-information"><input class="checkout-input" type="text" name="email"
-                            placeholder="Email"></div>
+                    <div class="checkout-contact-information"><input class="checkout-input" required type="text"
+                            name="email" placeholder="Email"></div>
                 </div>
                 <div>
                     <div class="checkout-label"><span>Shipping Address</span></div>
                     <div class="checkout-width-50">
-                        <div><input class="checkout-input" type="text" name="firstName" placeholder="First Name"></div>
-                        <div><input class="checkout-input" type="text" name="lastName" placeholder="Last Name"></div>
+                        <div><input class="checkout-input" required type="text" name="firstName"
+                                placeholder="First Name"></div>
+                        <div><input class="checkout-input" required type="text" name="lastName" placeholder="Last Name">
+                        </div>
                     </div>
                     <div>
-                        <div><input class="checkout-input" type="text" placeholder="Company (optional)"></div>
-                        <div><input class="checkout-input" type="text" name="address" placeholder="Address"></div>
-                        <div><input class="checkout-input" type="text" placeholder="Apartment, suite, etc. (optional)">
+                        <div><input class="checkout-input" required type="text" placeholder="Company (optional)"></div>
+                        <div><input class="checkout-input" required type="text" name="address" placeholder="Address">
+                        </div>
+                        <div><input class="checkout-input" required type="text"
+                                placeholder="Apartment, suite, etc. (optional)">
                         </div>
                     </div>
                     <div class="checkout-width-50">
-                        <div><input class="checkout-input" type="text" name="postalCode" placeholder="Postal Code">
+                        <div><input class="checkout-input" required type="text" name="postalCode"
+                                placeholder="Postal Code">
                         </div>
-                        <div><input class="checkout-input" type="text" name="city" placeholder="City"></div>
+                        <div><input class="checkout-input" required type="text" name="city" placeholder="City"></div>
                     </div>
-                    <div><input class="checkout-input" type="text" name="countryOrRegion"
-                            placeholder="Country/Region"><input class="checkout-input" type="text"
-                            placeholder="Phone (optional)"></div>
+                    <div>
+                        <input class="checkout-input" type="text" required name="countryOrRegion"
+                            placeholder="Country/Region">
+                        <input class="checkout-input" required type="text" placeholder="Phone (optional)">
+                    </div>
                 </div>
                 <div><a href="./payment-page.html"><button class="block-button">Continue to Payment</button></a></div>
             </div>
-            <div class="cart display-none">
-                <div class="cart-header"><span>Cart</span>
-                </div>
-                <div class="cart-main-content">
-                    <section class="cart-product"><a class="product-link"><img class="product-image"
-                                src="../assets/images/women-product-1.png" alt="Product-11">
-                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                    PERFORMANCE
-                                    PARKA 1</span><span class="cart-product-price">€135</span><span
-                                    class="product-quantity"> x 3</span>
-                            </div>
-                        </a>
-                    </section>
-                    <section class="cart-product"><a class="product-link"><img class="product-image"
-                                src="../assets/images/women-fashion-3.png" alt="Product-11">
-                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                    PERFORMANCE
-                                    PARKA 3</span><span class="cart-product-price">€145</span><span
-                                    class="product-quantity"> x 2</span>
-                            </div>
-                        </a>
-                    </section>
-                    <section class="cart-product"><a class="product-link"><img class="product-image"
-                                src="../assets/images/women-fashion-4.png" alt="Product-11">
-                            <div class="product-image-caption"><span class="cart-product-name">RECYCLED POLYESTER
-                                    PERFORMANCE
-                                    PARKA 7</span><span class="cart-product-price">€125</span><span
-                                    class="product-quantity"> x 5</span>
-                            </div>
-                        </a>
-                    </section>
-
-                </div>
-                <div class="cart-footer">
-                    <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
-                    <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
-                    <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
-                </div>
-            </div>
-
         </div>
+        <div class="cart display-none">
+            <div class="cart-header"><span>Cart</span>
+            </div>
+            <div class="cart-main-content">
+
+
+            </div>
+            <!-- <div class="cart-footer">
+                <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€1900</span></div>
+                <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€323</span></div>
+                <div class="cart-total"><span>Total</span><span class="cart-value">€2223</span></div>
+            </div> -->
+        </div>
+
         <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span></footer>
 
     </div>
 
-    <script type="text/javascript" src="../products.js"></script>
+    <script src="../products.js"></script>
     <script src="../app.js"></script>
-    <script src="../init.js"></script>
+
+
 </body>
 
 </html>
