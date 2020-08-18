@@ -155,7 +155,7 @@ renderCartProducts = () => {
         
            <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€${subtotal}</span></div>
            <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€${taxes}</span></div>
-           <div class="cart-total"><span>Total</span><span class="cart-value">€${total}</span></div>
+           <div class="cart-total"><span>Total</span><span style="color: #000000;" class="cart-value">€${total}</span></div>
            <div class="cart-checkout"><a class="block-button" href="checkout-page.html">Checkout</a>     
                        
       `;
