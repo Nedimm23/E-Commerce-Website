@@ -179,6 +179,7 @@ openAndCloseCartModal = () => {
 };
 
 choosePaymentOption = (method, event) => {
+  var method = document.getElementById("method").value;
   let paymentMethods = document.getElementsByClassName(
     "checkout-payment-method"
   );
@@ -189,6 +190,8 @@ choosePaymentOption = (method, event) => {
   }
 
   event.target.classList.add("checkout-chosen-method");
+
+  localStorage.setItem("txtpaymentMethod", method);
 };
 
 window.addEventListener("scroll", () => {
@@ -224,36 +227,6 @@ sideDrawer = () => {
   }
 };
 
-getCheckoutData = () => {
-  //gettting the values
-  var email = document.getElementById("email").value;
-  var firstname = document.getElementById("firstname").value;
-  var lastname = document.getElementById("lastname").value;
-  var company = document.getElementById("company").value;
-  var address = document.getElementById("address").value;
-  var apartment = document.getElementById("apartment").value;
-  var postalCode = document.getElementById("postalCode").value;
-  var city = document.getElementById("city").value;
-  var country = document.getElementById("country").value;
-  var phone = document.getElementById("phone").value;
-  var paymentMethod = document.getElementById("paymentMethod").value;
-
-  //saving the values in local storage
-  localStorage.setItem("email", email);
-  localStorage.setItem("firstname", firstname);
-  localStorage.setItem("lastname", lastname);
-  localStorage.setItem("company", company);
-  localStorage.setItem("address", address);
-  localStorage.setItem("apartment", apartment);
-  localStorage.setItem("postalCode", postalCode);
-  localStorage.setItem("city", city);
-  localStorage.setItem("country", country);
-  localStorage.setItem("phone", phone);
-  localStorage.setItem("paymentMethod", paymentMethod);
-
-  // return false;
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const product = localStorage.getItem("products");
@@ -265,5 +238,4 @@ document.addEventListener("DOMContentLoaded", () => {
 $(document).ready(function () {
   renderCartCount();
   renderCartProducts();
-  getCheckoutData();
 });

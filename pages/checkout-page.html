@@ -10,8 +10,40 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/checkout.css" />
+    <script>
+        function getCheckoutData() {
+            //gettting the values
+            var email = document.getElementById("email").value;
+            var firstname = document.getElementById("firstname").value;
+            var lastname = document.getElementById("lastname").value;
+            var company = document.getElementById("company").value;
+            var address = document.getElementById("address").value;
+            var apartment = document.getElementById("apartment").value;
+            var postalCode = document.getElementById("postalCode").value;
+            var city = document.getElementById("city").value;
+            var country = document.getElementById("country").value;
+            var phone = document.getElementById("phone").value;
+            // var method = document.getElementById("method").value;
+
+            //saving the values in local storage
+            localStorage.setItem("txtemail", email);
+            localStorage.setItem("txtfirstname", firstname);
+            localStorage.setItem("txtlastname", lastname);
+            localStorage.setItem("txtcompany", company);
+            localStorage.setItem("txtaddress", address);
+            localStorage.setItem("txtapartment", apartment);
+            localStorage.setItem("txtpostalCode", postalCode);
+            localStorage.setItem("txtcity", city);
+            localStorage.setItem("txtcountry", country);
+            localStorage.setItem("txtphone", phone);
+            // localStorage.setItem("txtpaymentMethod", method);
+
+            return false;
+        }
+    </script>
 
     <title>Checkout Page</title>
+
 </head>
 
 <body onload="renderCartProducts()">
@@ -35,37 +67,48 @@
             </ul>
         </nav>
         <div class="checkout-main-content">
-            <form action="payment-page.html">
-                <div class="checkout-information">
+            <div class="checkout-information">
+                <form action="payment-page.html" method="GET">
                     <div>
                         <div class="checkout-label"><span>Contact Information</span></div>
-                        <div class="checkout-contact-information"><input class="checkout-input" required type="text"
-                                name="email" id="email" placeholder="Email"></div>
+                        <div class="checkout-contact-information">
+                            <input class="checkout-input" required type="text" name="email" id="email"
+                                placeholder="Email">
+                        </div>
                     </div>
                     <div>
                         <div class="checkout-label"><span>Shipping Address</span></div>
                         <div class="checkout-width-50">
-                            <div><input class="checkout-input" required type="text" id="firstname" name="firstName"
-                                    placeholder="First Name"></div>
-                            <div><input class="checkout-input" required type="text" id="lastname" name="lastName"
+                            <div>
+                                <input class="checkout-input" required type="text" id="firstname" name="firstName"
+                                    placeholder="First Name">
+                            </div>
+                            <div>
+                                <input class="checkout-input" required type="text" id="lastname" name="lastName"
                                     placeholder="Last Name">
                             </div>
                         </div>
                         <div>
-                            <div><input class="checkout-input" required type="text" id="company"
-                                    placeholder="Company (optional)"></div>
-                            <div><input class="checkout-input" required type="text" id="address" name="address"
+                            <div>
+                                <input class="checkout-input" required type="text" id="company"
+                                    placeholder="Company (optional)">
+                            </div>
+                            <div>
+                                <input class="checkout-input" required type="text" id="address" name="address"
                                     placeholder="Address">
                             </div>
-                            <div><input class="checkout-input" required type="text" id="apartment"
+                            <div>
+                                <input class="checkout-input" required type="text" id="apartment"
                                     placeholder="Apartment, suite, etc. (optional)">
                             </div>
                         </div>
                         <div class="checkout-width-50">
-                            <div><input class="checkout-input" required type="text" id="postalCode" name="postalCode"
+                            <div>
+                                <input class="checkout-input" required type="text" id="postalCode" name="postalCode"
                                     placeholder="Postal Code">
                             </div>
-                            <div><input class="checkout-input" required type="text" id="city" name="city"
+                            <div>
+                                <input class="checkout-input" required type="text" id="city" name="city"
                                     placeholder="City"></div>
                         </div>
                         <div>
@@ -74,12 +117,15 @@
                             <input class="checkout-input" required type="text" id="phone"
                                 placeholder="Phone (optional)">
                         </div>
+
                     </div>
-                    <div><button type="submit" onclick="getCheckoutData()" class="block-button">Continue to
+
+                    <div>
+                        <button type="submit" onclick="getCheckoutData()" class="block-button">Continue to
                             Payment</button>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
         <div class="cart display-none">
             <div class="cart-header"><span>Cart</span>
@@ -96,7 +142,7 @@
         <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span></footer>
 
     </div>
-
+    <script src="../messageConfirm.js"></script>
     <script src="../products.js"></script>
     <script src="../app.js"></script>
 

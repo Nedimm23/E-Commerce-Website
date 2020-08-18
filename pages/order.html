@@ -6,41 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/images/cos-logo.png" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/checkout.css" />
-    <script type="text/javascript">
-        document.getElementById("email").innerHTML = localStorage.getItem("email");
-        document.getElementById("firstname").innerHTML = localStorage.getItem(
-            "firstname"
-        );
-        document.getElementById("lastname").innerHTML = localStorage.getItem(
-            "lastname"
-        );
-        document.getElementById("company").innerHTML = localStorage.getItem(
-            "company"
-        );
-        document.getElementById("address").innerHTML = localStorage.getItem(
-            "address"
-        );
-        document.getElementById("apartment").innerHTML = localStorage.getItem(
-            "apartment"
-        );
-        document.getElementById("postalCode").innerHTML = localStorage.getItem(
-            "postalCode"
-        );
-        document.getElementById("city").innerHTML = localStorage.getItem("city");
-        document.getElementById("country").innerHTML = localStorage.getItem(
-            "country"
-        );
-        document.getElementById("phone").innerHTML = localStorage.getItem("phone");
-        document.getElementById("paymentMethod").innerHTML = localStorage.getItem(
-            "paymentMethod"
-        );
-    </script>
+
     <title>Order Page</title>
 
 
@@ -53,15 +24,15 @@
                 </a>
             </div>
             <ul class="checkout-navigation">
-                <li class="checkout-navigation-link black-text-color">Information</li><svg class="arrow" width="9"
-                    height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <li class="checkout-navigation-link ">Information</li><svg class="arrow" width="9" height="15"
+                    viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L7.5 7.5L1 14" stroke="#C4C4C4"></path>
                 </svg>
                 <li class="checkout-navigation-link">Payment</li><svg class="arrow" width="9" height="15"
                     viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 1L7.5 7.5L1 14" stroke="#C4C4C4"></path>
                 </svg>
-                <li class="checkout-navigation-link">Confirm</li>
+                <li class="checkout-navigation-link black-text-color">Confirm</li>
             </ul>
         </nav>
         <div class="checkout-main-content">
@@ -70,31 +41,34 @@
                     <span>Confirm</span>
                 </div>
                 <div class="checkout-information">
-                    <span id="email" class="checkout-email"></span>
-                    <span id="firstname" class="checkout-full-name"></span>
-                    <span id="company" class="checkout-company"></span>
-                    <span id="address" class="checkout-full-address"></span>
-                    <span id="postalCode" class="checkout-postal-code"></span>
-                    <span id="country" class="checkout-country-or-region"></span>
-                    <span id="phone" class="checkout-phone-number"></span>
-                    <span id="paymentMethod" class="checkout-payment-method-order">Apple Pay
-                        (dzibra_23@hotmail.com)</span>
-                </div>
-                <div class="checkout-button"><a><button id="mess" class="block-button">Order</button></a></div>
-            </div>
-            <div class="cart display-none">
-                <div class="cart-header"><span>Cart</span>
-                </div>
-                <div class="cart-main-content">
-
-
-                </div>
-                <div id="footer" class="cart-footer">
-
+                    <span id="data-email" class="checkout-email"></span>
+                    <div>
+                        <span id="data-firstname" class="checkout-full-name"></span>
+                        <span id="data-lastname" class="checkout-full-name"></span>
+                    </div>
+                    <span id="data-company" class="checkout-company"></span>
+                    <span id="data-address" class="checkout-full-address"></span>
+                    <span id="data-postalCode" class="checkout-postal-code"></span>
+                    <span id="data-country" class="checkout-country-or-region"></span>
+                    <span id="data-phone" class="checkout-phone-number"></span>
+                    <span id="data-paymentMethod" class="checkout-payment-method-order"></span>
                 </div>
             </div>
-
+            <div class="checkout-button"><a><button id="mess" class="block-button">Order</button></a></div>
         </div>
+        <div class="cart display-none">
+            <div class="cart-header"><span>Cart</span>
+            </div>
+            <div class="cart-main-content">
+
+
+            </div>
+            <div id="footer" class="cart-footer">
+
+            </div>
+        </div>
+
+
         <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span></footer>
     </div>
 

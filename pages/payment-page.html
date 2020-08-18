@@ -25,12 +25,13 @@
                     </a>
                 </div>
                 <ul class="checkout-navigation">
-                    <li class="checkout-navigation-link black-text-color">Information</li><svg class="arrow" width="9"
-                        height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li class="checkout-navigation-link">Information</li>
+                    <svg class="arrow" width="9" height="15" viewBox="0 0 9 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L7.5 7.5L1 14" stroke="#C4C4C4"></path>
                     </svg>
-                    <li class="checkout-navigation-link">Payment</li><svg class="arrow" width="9" height="15"
-                        viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li class="checkout-navigation-link black-text-color">Payment</li><svg class="arrow" width="9"
+                        height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 1L7.5 7.5L1 14" stroke="#C4C4C4"></path>
                     </svg>
                     <li class="checkout-navigation-link">Confirm</li>
@@ -39,24 +40,25 @@
             <div class="checkout-main-content">
                 <div class="checkout-payment">
                     <div class="checkout-title"><span>Payment provider</span></div>
-                    <div class="checkout-payment-options">
-                        <div id="paymentMethod" onclick="choosePaymentOption('PayPal', event)"
-                            class="checkout-payment-method paypal">
+                    <form action="order.html" method="GET">
+                        <div class="checkout-payment-options">
+                            <div id="method" onclick="choosePaymentOption('PayPal', event)"
+                                class="checkout-payment-method paypal">
+                            </div>
+                            <div id="method" onclick="choosePaymentOption('Stripe', event)"
+                                class="checkout-payment-method stripe">
+                            </div>
+                            <div id="method" onclick="choosePaymentOption('Apple Pay', event)"
+                                class="checkout-payment-method apple-pay"></div>
+                            <div id="method" onclick="choosePaymentOption('Klarna', event)"
+                                class="checkout-payment-method klarna">
+                            </div>
                         </div>
-                        <div id="paymentMethod" onclick="choosePaymentOption('Stripe', event)"
-                            class="checkout-payment-method stripe">
-                        </div>
-                        <div id="paymentMethod" onclick="choosePaymentOption('Apple Pay', event)"
-                            class="checkout-payment-method apple-pay"></div>
-                        <div id="paymentMethod" onclick="choosePaymentOption('Klarna', event)"
-                            class="checkout-payment-method klarna">
-                        </div>
-                    </div>
-                    <div class="checkout-confirm">
-                        <a href="./order.html"><button class="block-button">Continue to
+                        <div class="checkout-confirm">
+                            <button type="submit" class="block-button">Continue to
                                 Confirm</button>
-                        </a>
-                    </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="cart display-none">
                     <div class="cart-header"><span>Cart</span>
@@ -74,7 +76,7 @@
             <footer class="footer" style="position: fixed;"><span class="footer-copyright">Copyright 2020</span>
             </footer>
         </div>
-
+        <script src="../messageConfirm.js"></script>
         <script src="../products.js"></script>
         <script src="../app.js"></script>
 
