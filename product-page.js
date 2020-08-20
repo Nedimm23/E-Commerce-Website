@@ -87,19 +87,19 @@ class ProductPage {
         <div class="product-bottom-title">
           <span>You might also like</span>
         </div>
-            <section class="product"><a class="product-link" ><img class="product-image"
-                        src="${this.product.image}" alt="${this.product.title}">
+            <section class="product"><a class="product-link" href="./category-page.html" ><img class="product-image"
+                        src="${this.product.otherimg1}" alt="${this.product.title}">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
                 </a>
             </section>
-            <section class="product"><a class="product-link" href="product-page.html#${this.product.id}"><img class="product-image"
-                        src="${this.product.image4}" alt="${this.product.title}">
+            <section class="product"><a class="product-link" href="./category-page.html"><img class="product-image"
+                        src="${this.product.otherimg2}" alt="${this.product.title}">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
                 </a></section>
-            <section class="product"><a class="product-link" href="/pages/product-page.html#${this.product.id}"><img class="product-image"
-                        src="${this.product.image}" alt="${this.product.title}">
+            <section class="product"><a class="product-link" href="./category-page.html"><img class="product-image"
+                        src="${this.product.otherimg3}" alt="${this.product.title}">
                     <div class="product-image-caption"><span class="product-name">${this.product.title}</span><span
                             class="product-price">€ ${this.product.price}</span></div>
                 </a>

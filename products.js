@@ -9,8 +9,11 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
-      "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
+      "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps.   - Relaxed fit    - Dropped shoulder   - Elasticated body   - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
       "32% Polyamide / 29% Viscose / 23% Silk / 15% Cotton / 1% Elastane / Machine washable Make sure that your favourite items remain long-loved pieces for years to come; read our product care guide and explore our selection of carefully chosen care products. Product No: 0930647001 ",
   },
@@ -24,6 +27,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-product-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -39,6 +45,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-product-1.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -54,6 +63,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-product-1.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -69,6 +81,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -84,6 +99,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-product-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -99,6 +117,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-product-1.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -114,6 +135,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-product-1.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -129,6 +153,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -144,6 +171,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-product-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -159,6 +189,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-product-1.png",
+    otherimg3: "../assets/images/women-fashion-3.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:
@@ -174,6 +207,9 @@ var PRODUCTS_LIST = [
     image4: "../assets/images/women-product-3.png",
     image5: "../assets/images/women-product-4.png",
     image6: "../assets/images/women-product-5.png",
+    otherimg1: "../assets/images/women-fashion-1.png",
+    otherimg2: "../assets/images/women-fashion-2.png",
+    otherimg3: "../assets/images/women-product-1.png",
     description:
       "Crafted from an organic cotton-mulberry silk mix, this oversized cardigan features a elasticated body and dropped shoulder. Effortlessly style with tonal shorts and pumps. - Relaxed fit - Dropped shoulder - Elasticated body - Ribbed cuff 32% Polyamide, 29% Viscose, 23% Mulberry silk, 15% Organic cotton, 1% Elastane / Machine washable Back length of size XS/S is 70cm ",
     description2:

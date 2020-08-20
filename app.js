@@ -33,6 +33,10 @@ function redirect(id) {
   // window.location.hash = id;
 }
 
+function checkoutRedirect() {
+  window.location.href = "/pages/checkout-page.html";
+}
+
 class UI {
   displayProducts() {
     let result = "";
@@ -156,7 +160,7 @@ renderCartProducts = () => {
            <div class="cart-subtotal"><span>Subtotal</span><span class="cart-value">€${subtotal}</span></div>
            <div class="cart-taxes"><span>Taxes</span><span class="cart-value">€${taxes}</span></div>
            <div class="cart-total"><span>Total</span><span style="color: #000000;" class="cart-value">€${total}</span></div>
-           <div class="cart-checkout"><a class="block-button" href="checkout-page.html">Checkout</a>     
+           <div class="cart-checkout"><a class="block-button" onclick="checkoutRedirect()">Checkout</a></div>    
                        
       `;
 
